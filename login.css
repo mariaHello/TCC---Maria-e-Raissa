@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', Arial, sans-serif;
+    background-color: #FEF47F;
+}
+
+.container {
+    width: 300px;
+    margin: 140px 0 0 400px; /* Ajustando as margens para mover para a esquerda */
+    padding: 20px;
+    background-color: transparent;
+}
+
+.container h1 {
+    font-family: 'Times New Roman', sans-serif;
+    color: #30168b;
+    text-align: center;
+    margin-bottom: 30px; /* Adicionando margem inferior para separar do formulário */
+    font-size: 55px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 20px; /* Aumentando o preenchimento para espaçamento interno */
+    margin-top: 20px; /* Aumentando a margem superior */
+    margin-bottom: 40px; /* Aumentando a margem inferior */
+    border: none;
+    border-radius: 8px; /* Aumentando o raio da borda */
+    font-family: 'Comic Sans MS', Arial, sans-serif;
+    font-size: 18px; /* Aumentando o tamanho da fonte */
+    color: #FF0000;
+}
+
+.forgot-password {
+    color: #30168b;
+    font-family: 'Comic Sans MS', Arial, sans-serif;
+    font-size: 20px; /* Aumentando o tamanho da fonte */
+    text-align: right; /* Alinhando o texto à direita */
+    display: block; /* Garantindo que o link ocupe toda a largura disponível */
+    margin-bottom: 20px; /* Adicionando margem inferior para separar do botão de entrada */
+}
+
+
+.login-btn,
+.register-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Comic Sans MS', Arial, sans-serif;
+    margin-bottom: 20px; /* Aumentando a margem inferior */
+    font-size: 18px; /* Aumentando o tamanho da fonte */
+}
+
+.login-btn {
+    background-color: #30168b;
+    color: #fff;
+    border: none;
+}
+
+.register-btn {
+    background-color: #fcf47c;
+    color: #FF0000;
+    border: 2px solid #FF0000;
+}
+
+.register-btn:hover {
+    background-color: #FF0000;
+    color: #fff;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Comic Sans MS', Arial, sans-serif;
+    color: #FF0000;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #FF0000;
+}
+
+input[type="text"] {
+    background-color: #fcd47c;
+}
+
+input[type="password"] {
+    background-color: #fcd47c;
+}
+
+.logo {
+    position: fixed; /* Define a posição da logo */
+    top: 45%; /* Ajusta a posição verticalmente para o meio */
+    right: 300px; /* Define a distância da direita */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    width: 600px; /* Define a largura da logo */
+    height: auto; /* Mantém a proporção da imagem */
+}

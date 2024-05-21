@@ -1,0 +1,170 @@
+/* Estilo geral */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Permite que os elementos ocupem todo o espaço vertical disponível */
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da tela */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-right: 100px; /* Adiciona espaço à direita do contêiner */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #30168b; /* Altera a cor de fundo do cabeçalho */
+    padding: 20px 0;
+    text-align: center; /* Centraliza o conteúdo do cabeçalho */
+}
+
+.title-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FEF47F; /* Altera a cor do título para #f5e8a0 */
+    text-decoration: none; /* Remove sublinhado dos links */
+    margin-right: auto;
+}
+
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-left: auto; /* Empurra o formulário para a direita */
+}
+
+
+.search-bar input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.search-bar button {
+    background-color: #b29af3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 20px 20px 0; /* Adiciona bordas arredondadas apenas no botão direito */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #8a6bc8;
+}
+
+.search-bar button:focus {
+    outline: none;
+}
+
+nav {
+    margin-top: 20px; /* Espaçamento entre o logotipo e as abas */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block; /* Exibe os itens da lista em linha */
+    margin-right: 20px; /* Espaçamento entre os itens da lista */
+}
+
+nav li:last-child {
+    margin-right: 0; /* Remove o espaçamento do último item da lista */
+}
+
+.top-box {
+    display: inline-block;
+    background-color: #b29af3;
+    color: #30198f;
+    padding: 10px 20px;
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    text-decoration: none;
+}
+
+.top-box:hover {
+    background-color: #8a6bc8;
+}
+
+.top-box:active {
+    background-color: #634c94;
+}
+
+main {
+  flex: 1; /* Flex-grow com valor alto */
+  background-color: #FEF47F;
+}
+
+.featured-restaurants {
+    background-color: #FEF47F; /* Altera o background da região em destaque */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center; /* Centraliza o conteúdo */
+    margin: 50px auto 0; /* Adiciona margem superior maior e centraliza horizontalmente */
+}
+
+.restaurant-box {
+    flex: 0 1 calc(30% - 20px); /* Define a largura flexível das caixas dos restaurantes e desconta a margem */
+    margin: 0 10px; /* Adiciona margem entre as caixas dos restaurantes */
+    text-align: center; /* Centraliza o conteúdo */
+    box-sizing: border-box; /* Inclui a borda e o preenchimento na largura e na altura */
+}
+
+.restaurant-box:hover img {
+    transform: scale(1.1); /* Aumenta a escala da imagem em 10% quando o mouse estiver sobre ela */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito */
+}
+
+
+.restaurants {
+    display: flex; /* Torna o contêiner de restaurantes um flex container */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+}
+
+.logo-mcdonalds {
+    max-width: 200px; /* Define a largura máxima das imagens */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 10px; /* Adiciona espaço entre a imagem e o texto */
+}
+
+.logo-burger-king {
+    max-width: 170px; /* Define a largura máxima das imagens */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 10px; /* Adiciona espaço entre a imagem e o texto */
+}
+
+.logo-subway {
+    max-width: 450px; /* Define a largura máxima das imagens */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 10px; /* Adiciona espaço entre a imagem e o texto */
+}
+
+footer {
+    background-color: #30168b; /* Altera a cor de fundo do rodapé */
+    padding: 20px 0;
+    text-align: center;
+    width: 100%; /* Garante que o rodapé ocupe a largura total da tela */
+    bottom: 0; /* Alinha o rodapé à parte inferior da janela de visualização */
+}
+
+footer p {
+    color: #f5e8a0; /* Altera a cor do texto */
+}
