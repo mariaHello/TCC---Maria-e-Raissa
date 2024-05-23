@@ -3,52 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>esqueceu a senha?</title>
+    <title>Recuperação de Senha</title>
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <div class="container">
-        <h1>Faça seu Cadastro</h1>
-        <form id="loginForm" action="#" method="POST">
-            <input type="text" placeholder="Email ou CPF" name="email-cpf" id="emailCpf">
-            <input type="password" placeholder="Senha" name="password" id="password">
-            <a href="#" class="forgot-password">Esqueceu a senha?</a>
-            <form action="restaurante.html" method="get">
-              <button type="submit" class="login-btn">Entrar</button>
-                </form>
-            <button type="button" class="register-btn">Cadastre-se</button>
+        <h1>Recuperação de Senha</h1>
+        <form id="resetForm" action="#" method="POST">
+            <input type="text" placeholder="Email ou CPF" name="email-cpf" id="emailCpf" required>
+             <button type="button" class="register-btn">Enviar Link de Recuperação</button>
         </form>
+        <a href="login.html" class="back-to-login">Voltar ao Login</a>
     </div>
     <img src="logo.png" alt="Logo" class="logo">
     
     <script>
-        // Adiciona um evento de escuta ao envio do formulário
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            // Impede o envio padrão do formulário
+        document.getElementById('resetForm').addEventListener('submit', function(event) {
             event.preventDefault();
             
-            // Recupera os valores do campo de email/CPF e da senha
             var emailCpf = document.getElementById('emailCpf').value.trim();
-            var password = document.getElementById('password').value.trim();
             
-            // Expressão regular para verificar se o email possui um "@"
             var emailRegex = /\S+@\S+\.\S+/;
-            // Expressão regular para verificar se o CPF começa com um número
-            var cpfRegex = /^[0-9]/;
+            var cpfRegex = /^[0-9]{11}$/;  // Considerando CPF com 11 dígitos
             
-            // Verifica se email/CPF e senha foram preenchidos
-            if (emailCpf && password) {
-                // Verifica se o email/CPF é um email válido ou um CPF válido
+            if (emailCpf) {
                 if (emailRegex.test(emailCpf) || cpfRegex.test(emailCpf)) {
-                    // Redireciona o usuário para a página principal
-                    window.location.href = "file:///C:/Users/riche/Desktop/dasd/restaurante.html";
+                    // Simulação de envio de link de recuperação
+                    alert("Um link de recuperação foi enviado para seu email ou CPF.");
                 } else {
-                    // Exibe uma mensagem de erro se o email/CPF não for válido
                     alert("Por favor, insira um email válido ou um CPF válido.");
                 }
             } else {
-                // Exibe uma mensagem de erro se email/CPF ou senha não forem preenchidos
-                alert("Por favor, preencha seu email/CPF e senha.");
+                alert("Por favor, preencha seu email/CPF.");
             }
         });
     </script>
