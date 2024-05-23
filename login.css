@@ -22,36 +22,36 @@ body {
 
 input[type="text"],
 input[type="password"] {
-    width: 100%;
-    padding: 20px; /* Aumentando o preenchimento para espaçamento interno */
-    margin-top: 20px; /* Aumentando a margem superior */
-    margin-bottom: 40px; /* Aumentando a margem inferior */
+    width: 150%;
+    padding: 70px; /* Aumentando o preenchimento para espaçamento interno */
+    margin-top: 40px; /* Aumentando a margem superior */
+    margin-bottom: 60px; /* Aumentando a margem inferior */
     border: none;
-    border-radius: 8px; /* Aumentando o raio da borda */
+    border-radius: 10px; /* Aumentando o raio da borda */
     font-family: 'Comic Sans MS', Arial, sans-serif;
-    font-size: 18px; /* Aumentando o tamanho da fonte */
+    font-size: 25px; /* Aumentando o tamanho da fonte */
     color: #FF0000;
 }
 
 .forgot-password {
     color: #30168b;
     font-family: 'Comic Sans MS', Arial, sans-serif;
-    font-size: 20px; /* Aumentando o tamanho da fonte */
+    font-size: 30px; /* Aumentando o tamanho da fonte */
     text-align: right; /* Alinhando o texto à direita */
     display: block; /* Garantindo que o link ocupe toda a largura disponível */
-    margin-bottom: 20px; /* Adicionando margem inferior para separar do botão de entrada */
+    margin-bottom: 30px; /* Adicionando margem inferior para separar do botão de entrada */
 }
 
 
 .login-btn,
 .register-btn {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
+    width: 150%;
+    padding: 30px;
+    border-radius: 10px;
     cursor: pointer;
     font-family: 'Comic Sans MS', Arial, sans-serif;
-    margin-bottom: 20px; /* Aumentando a margem inferior */
-    font-size: 18px; /* Aumentando o tamanho da fonte */
+    margin-bottom: 25px; /* Aumentando a margem inferior */
+    font-size: 22px; /* Aumentando o tamanho da fonte */
 }
 
 .login-btn {
@@ -73,12 +73,12 @@ input[type="password"] {
 
 input[type="text"],
 input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    width: 150%;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-family: 'Comic Sans MS', Arial, sans-serif;
     color: #FF0000;
 }
@@ -110,6 +110,6 @@ input[type="password"] {
             position: absolute;
             top: 45px; /* Deslocamento do topo */
             left: 300px; /* Deslocamento da esquerda */
-            width: 250px; /* Ajuste o tamanho conforme necessário */
+            width: 300px; /* Ajuste o tamanho conforme necessário */
             height: auto; /* Mantém a proporção da imagem */
         }
