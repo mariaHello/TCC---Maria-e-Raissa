@@ -45,7 +45,7 @@ input[type="password"] {
 
 .login-btn,
 .register-btn {
-    width: 120%;
+    width: 100%;
     padding: 20px;
     border-radius: 8px;
     cursor: pointer;
