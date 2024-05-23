@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form id="loginForm" action="restaurante.html" method="POST">
+            <input type="text" placeholder="Email ou CPF" name="email-cpf" id="emailCpf" required>
+            <input type="password" placeholder="Senha" name="password" id="password" required>
+            <a href="senha.html" class="forgot-password">Esqueceu a senha?</a>
+            <button type="submit" class="login-btn">Entrar</button>
+            <button type="button" class="register-btn">Cadastre-se</button>
+        </form>
+    </div>
+    <img src="logo.png" alt="Logo" class="logo">
+    
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var emailCpf = document.getElementById('emailCpf').value.trim();
+            var password = document.getElementById('password').value.trim();
+            
+            var emailRegex = /\S+@\S+\.\S+/;
+            var cpfRegex = /^[0-9]{11}$/;
+            
+            if (emailCpf && password) {
+                if (emailRegex.test(emailCpf) || cpfRegex.test(emailCpf)) {
+                    window.location.href = "restaurante.html";
+                } else {
+                    alert("Por favor, insira um email válido ou um CPF válido.");
+                }
+            } else {
+                alert("Por favor, preencha seu email/CPF e senha.");
+            }
+        });
+    </script>
+</body>
+</html>
