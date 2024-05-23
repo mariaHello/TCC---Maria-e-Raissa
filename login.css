@@ -22,36 +22,36 @@ body {
 
 input[type="text"],
 input[type="password"] {
-    width: 150%;
-    padding: 70px; /* Aumentando o preenchimento para espaçamento interno */
-    margin-top: 40px; /* Aumentando a margem superior */
-    margin-bottom: 60px; /* Aumentando a margem inferior */
+    width: 120%;
+    padding: 60px; /* Aumentando o preenchimento para espaçamento interno */
+    margin-top: 30px; /* Aumentando a margem superior */
+    margin-bottom: 50px; /* Aumentando a margem inferior */
     border: none;
-    border-radius: 10px; /* Aumentando o raio da borda */
+    border-radius: 8px; /* Aumentando o raio da borda */
     font-family: 'Comic Sans MS', Arial, sans-serif;
-    font-size: 25px; /* Aumentando o tamanho da fonte */
+    font-size: 30px; /* Aumentando o tamanho da fonte */
     color: #FF0000;
 }
 
 .forgot-password {
     color: #30168b;
     font-family: 'Comic Sans MS', Arial, sans-serif;
-    font-size: 30px; /* Aumentando o tamanho da fonte */
+    font-size: 35px; /* Aumentando o tamanho da fonte */
     text-align: right; /* Alinhando o texto à direita */
     display: block; /* Garantindo que o link ocupe toda a largura disponível */
-    margin-bottom: 30px; /* Adicionando margem inferior para separar do botão de entrada */
+    margin-bottom: 35px; /* Adicionando margem inferior para separar do botão de entrada */
 }
 
 
 .login-btn,
 .register-btn {
-    width: 150%;
-    padding: 30px;
-    border-radius: 10px;
+    width: 120%;
+    padding: 20px;
+    border-radius: 8px;
     cursor: pointer;
     font-family: 'Comic Sans MS', Arial, sans-serif;
-    margin-bottom: 25px; /* Aumentando a margem inferior */
-    font-size: 22px; /* Aumentando o tamanho da fonte */
+    margin-bottom: 20px; /* Aumentando a margem inferior */
+    font-size: 30px; /* Aumentando o tamanho da fonte */
 }
 
 .login-btn {
@@ -73,12 +73,12 @@ input[type="password"] {
 
 input[type="text"],
 input[type="password"] {
-    width: 150%;
-    padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    width: 120%;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 20px;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     font-family: 'Comic Sans MS', Arial, sans-serif;
     color: #FF0000;
 }
