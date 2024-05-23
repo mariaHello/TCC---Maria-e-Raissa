@@ -108,8 +108,8 @@ input[type="password"] {
 }
    .loginimg {
             position: absolute;
-            top: 3px; /* Deslocamento do topo */
-            left: 7px; /* Deslocamento da esquerda */
-            width: 15px; /* Ajuste o tamanho conforme necessário */
+            top: 45px; /* Deslocamento do topo */
+            left: 300px; /* Deslocamento da esquerda */
+            width: 150px; /* Ajuste o tamanho conforme necessário */
             height: auto; /* Mantém a proporção da imagem */
         }
