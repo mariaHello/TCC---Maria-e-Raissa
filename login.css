@@ -23,9 +23,9 @@ body {
 input[type="text"],
 input[type="password"] {
     width: 120%;
-    padding: 60px; /* Aumentando o preenchimento para espaçamento interno */
+    padding: 70px; /* Aumentando o preenchimento para espaçamento interno */
     margin-top: 30px; /* Aumentando a margem superior */
-    margin-bottom: 50px; /* Aumentando a margem inferior */
+    margin-bottom: 30px; /* Aumentando a margem inferior */
     border: none;
     border-radius: 8px; /* Aumentando o raio da borda */
     font-family: 'Comic Sans MS', Arial, sans-serif;
@@ -36,10 +36,10 @@ input[type="password"] {
 .forgot-password {
     color: #30168b;
     font-family: 'Comic Sans MS', Arial, sans-serif;
-    font-size: 35px; /* Aumentando o tamanho da fonte */
+    font-size: 15px; /* Aumentando o tamanho da fonte */
     text-align: right; /* Alinhando o texto à direita */
     display: block; /* Garantindo que o link ocupe toda a largura disponível */
-    margin-bottom: 35px; /* Adicionando margem inferior para separar do botão de entrada */
+    margin-bottom: 20px; /* Adicionando margem inferior para separar do botão de entrada */
 }
 
 
@@ -50,8 +50,8 @@ input[type="password"] {
     border-radius: 8px;
     cursor: pointer;
     font-family: 'Comic Sans MS', Arial, sans-serif;
-    margin-bottom: 20px; /* Aumentando a margem inferior */
-    font-size: 30px; /* Aumentando o tamanho da fonte */
+    margin-bottom: 30px; /* Aumentando a margem inferior */
+    font-size: 40px; /* Aumentando o tamanho da fonte */
 }
 
 .login-btn {
@@ -74,7 +74,7 @@ input[type="password"] {
 input[type="text"],
 input[type="password"] {
     width: 120%;
-    padding: 15px;
+    padding: 20px;
     margin-top: 15px;
     margin-bottom: 20px;
     border: none;
