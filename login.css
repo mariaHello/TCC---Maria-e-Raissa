@@ -110,6 +110,6 @@ input[type="password"] {
             position: absolute;
             top: 45px; /* Deslocamento do topo */
             left: 300px; /* Deslocamento da esquerda */
-            width: 150px; /* Ajuste o tamanho conforme necessário */
+            width: 250px; /* Ajuste o tamanho conforme necessário */
             height: auto; /* Mantém a proporção da imagem */
         }
