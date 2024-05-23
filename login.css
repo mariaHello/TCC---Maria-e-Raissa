@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     padding: 0;
@@ -6,8 +7,8 @@ body {
 }
 
 .container {
-    width: 250px; /* Reduzindo a largura do container */
-    margin: 140px auto; /* Centralizando o container na horizontal */
+    width: 300px;
+    margin: 140px 0 0 400px; /* Ajustando as margens para mover para a esquerda */
     padding: 20px;
     background-color: transparent;
 }
@@ -16,37 +17,42 @@ body {
     font-family: 'Times New Roman', sans-serif;
     color: #30168b;
     text-align: center;
-    margin-bottom: 20px; /* Reduzindo a margem inferior */
-    font-size: 40px; /* Reduzindo o tamanho da fonte */
+    margin-bottom: 30px; /* Adicionando margem inferior para separar do formulário */
+    font-size: 55px;
 }
 
 input[type="text"],
 input[type="password"] {
-    width: 100%; /* Usando a largura total do container */
-    padding: 10px; /* Reduzindo o preenchimento */
-    margin-top: 10px; /* Reduzindo a margem superior */
-    margin-bottom: 10px; /* Reduzindo a margem inferior */
+    width: 120%;
+    padding: 70px; /* Aumentando o preenchimento para espaçamento interno */
+    margin-top: 30px; /* Aumentando a margem superior */
+    margin-bottom: 30px; /* Aumentando a margem inferior */
     border: none;
-    border-radius: 5px; /* Reduzindo o raio da borda */
-    font-size: 20px; /* Reduzindo o tamanho da fonte */
+    border-radius: 8px; /* Aumentando o raio da borda */
+    font-family: 'Comic Sans MS', Arial, sans-serif;
+    font-size: 30px; /* Aumentando o tamanho da fonte */
+    color: #FF0000;
 }
 
 .forgot-password {
     color: #30168b;
-    font-size: 12px; /* Reduzindo o tamanho da fonte */
-    text-align: right;
-    display: block;
-    margin-bottom: 10px;
+    font-family: 'Comic Sans MS', Arial, sans-serif;
+    font-size: 15px; /* Aumentando o tamanho da fonte */
+    text-align: right; /* Alinhando o texto à direita */
+    display: block; /* Garantindo que o link ocupe toda a largura disponível */
+    margin-bottom: 20px; /* Adicionando margem inferior para separar do botão de entrada */
 }
+
 
 .login-btn,
 .register-btn {
     width: 100%;
-    padding: 15px; /* Reduzindo o preenchimento */
-    border-radius: 5px;
+    padding: 20px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 20px; /* Reduzindo o tamanho da fonte */
-    margin-bottom: 10px; /* Reduzindo a margem inferior */
+    font-family: 'Comic Sans MS', Arial, sans-serif;
+    margin-bottom: 30px; /* Aumentando a margem inferior */
+    font-size: 40px; /* Aumentando o tamanho da fonte */
 }
 
 .login-btn {
@@ -68,7 +74,13 @@ input[type="password"] {
 
 input[type="text"],
 input[type="password"] {
-    background-color: #fcd47c;
+    width: 120%;
+    padding: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Comic Sans MS', Arial, sans-serif;
     color: #FF0000;
 }
 
@@ -77,19 +89,28 @@ input[type="password"]::placeholder {
     color: #FF0000;
 }
 
-.logo {
-    position: fixed;
-    top: 50%;
-    right: 50px;
-    transform: translateY(-50%);
-    width: 200px; /* Reduzindo o tamanho da logo */
-    height: auto;
+input[type="text"] {
+    background-color: #fcd47c;
 }
 
-.loginimg {
-    position: absolute;
-    top: 45px;
-    left: 50px;
-    width: 200px; /* Reduzindo o tamanho da imagem */
-    height: auto;
+input[type="password"] {
+    background-color: #fcd47c;
 }
+
+.logo {
+    position: fixed; /* Define a posição da logo */
+    top: 45%; /* Ajusta a posição verticalmente para o meio */
+    right: 300px; /* Define a distância da direita */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    width: 600px; /* Define a largura da logo */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+}
+   .loginimg {
+            position: absolute;
+            top: 45px; /* Deslocamento do topo */
+            left: 300px; /* Deslocamento da esquerda */
+            width: 300px; /* Ajuste o tamanho conforme necessário */
+            height: auto; /* Mantém a proporção da imagem */
+        }
