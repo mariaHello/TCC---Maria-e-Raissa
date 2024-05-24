@@ -22,6 +22,11 @@ header {
     text-align: center; /* Centraliza o conteúdo do cabeçalho */
 }
 
+.logohome {
+    height: 50px; /* Ajuste a altura da logo conforme necessário */
+    margin-left: 20px; /* Ajuste a margem esquerda conforme necessário */
+}
+
 .title-search {
     display: flex;
     justify-content: space-between;
