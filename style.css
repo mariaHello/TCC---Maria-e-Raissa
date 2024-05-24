@@ -17,14 +17,14 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #30168b; /* Altera a cor de fundo do cabeçalho */
+    background-color: #2a1289; /* Altera a cor de fundo do cabeçalho */
     padding: 12px 0;
     text-align: center; /* Centraliza o conteúdo do cabeçalho */
 }
 
 .logohome {
-    height: 50px; /* Ajuste a altura da logo conforme necessário */
-    margin-left: 20px; /* Ajuste a margem esquerda conforme necessário */
+    height: 120px; /* Ajuste a altura da logo conforme necessário */
+    margin-left: 50px; /* Ajuste a margem esquerda conforme necessário */
 }
 
 .title-search {
