@@ -12,7 +12,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    padding-right: 0px; /* Adiciona espaço à direita do contêiner */
+    padding-right: 200px; /* Adiciona espaço à direita do contêiner */
 }
 
 /* Cabeçalho */
