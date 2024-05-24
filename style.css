@@ -18,7 +18,7 @@ body {
 /* Cabeçalho */
 header {
     background-color: #30168b; /* Altera a cor de fundo do cabeçalho */
-    padding: 20px 0;
+    padding: 12px 0;
     text-align: center; /* Centraliza o conteúdo do cabeçalho */
 }
 
