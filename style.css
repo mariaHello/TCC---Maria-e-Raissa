@@ -143,23 +143,47 @@ main {
     display: flex; /* Torna o contêiner de restaurantes um flex container */
     justify-content: space-between; /* Distribui o espaço entre os itens */
 }
-
-.logo-mcdonalds {
-    max-width: 200px; /* Define a largura máxima das imagens */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-bottom: 10px; /* Adiciona espaço entre a imagem e o texto */
+.promocoes-carrosel {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 100%; /* Garante que o carrossel ocupe toda a largura disponível */
 }
 
-.logo-burger-king {
-    max-width: 170px; /* Define a largura máxima das imagens */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-bottom: 10px; /* Adiciona espaço entre a imagem e o texto */
+.promo-container {
+    display: flex; /* Permite que os itens do carrossel sejam exibidos em linha */
+    transition: transform 0.5s ease; /* Adiciona uma transição suave para a mudança de slides */
 }
 
-.logo-subway {
-    max-width: 450px; /* Define a largura máxima das imagens */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-bottom: 10px; /* Adiciona espaço entre a imagem e o texto */
+.promo-item {
+    flex: 0 0 100%; /* Define a largura de cada item do carrossel */
+}
+
+.promo-item img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura do seu contêiner */
+    height: auto;
+}
+
+.promocoes-carrosel .prev,
+.promocoes-carrosel .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5); /* Fundo semi-transparente */
+    border: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.promocoes-carrosel .prev {
+    left: 20px;
+}
+
+.promocoes-carrosel .next {
+    right: 5px;
 }
 
 footer {
