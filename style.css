@@ -115,7 +115,7 @@ nav li:last-child {
 
 main {
   flex: 1; /* Flex-grow com valor alto */
-  background-color: #FEF47F;
+  background-color: #fff680;
 }
 
 .featured-restaurants {
