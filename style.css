@@ -17,7 +17,7 @@ body {
 
 /* CabeÃ§alho */
 header {
-    background-color: #30168b; /* Altera a cor de fundo do cabeÃ§alho */
+    background-color: #2a1289; /* Altera a cor de fundo do cabeÃ§alho */
     padding: 20px 0;
     text-align: center; /* Centraliza o conteÃºdo do cabeÃ§alho */
 }
@@ -64,7 +64,7 @@ header {
     color: #fff;
     border: none;
     padding: 10px 20px;
-    border-radius: 0 20px 20px 0; /* Adiciona bordas arredondadas apenas no botÃ£o direito */
+    border-radius: 0 10px 10px 0; /* Adiciona bordas arredondadas apenas no botÃ£o direito */
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
