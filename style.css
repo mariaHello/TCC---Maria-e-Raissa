@@ -46,7 +46,7 @@ header {
     display: flex;
     align-items: center;
     background-color: #fff;
-    border-radius: 20px;
+    border-radius: 8px;
     overflow: hidden;
     margin-left: auto; /* Empurra o formulÃ¡rio para a direita */
 }
@@ -64,7 +64,7 @@ header {
     color: #fff;
     border: none;
     padding: 10px 20px;
-    border-radius: 0 10px 10px 0; /* Adiciona bordas arredondadas apenas no botÃ£o direito */
+    border-radius: 0 8px 8px 0; /* Adiciona bordas arredondadas apenas no botÃ£o direito */
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
