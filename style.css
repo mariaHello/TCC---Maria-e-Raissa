@@ -161,11 +161,15 @@ main {
 
 .promo-item {
     flex: 0 0 calc(33.33% - 10px); /* Largura dinâmica para cada item */
+    border-radius: 10px; /* Borda arredondada */
+    overflow: hidden; /* Garante que a borda arredondada seja aplicada */
 }
 
 .promo-item img {
     width: 100%; /* Imagens responsivas */
     height: auto;
+    border-radius: 10px; /* Borda arredondada */
+    overflow: hidden; /* Garante que a borda arredondada seja aplicada */
 }
 
 .promocoes-carrosel .prev,
@@ -179,6 +183,13 @@ main {
     font-size: 18px;
     padding: 10px;
     cursor: pointer;
+    border-radius: 50%; /* Borda arredondada para os botões */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+.promocoes-carrosel .prev:hover,
+.promocoes-carrosel .next:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo ao passar o mouse */
 }
 
 .promocoes-carrosel .prev {
@@ -188,6 +199,7 @@ main {
 .promocoes-carrosel .next {
     right: 0;
 }
+
 
 footer {
     background-color: #30168b; /* Altera a cor de fundo do rodapé */
