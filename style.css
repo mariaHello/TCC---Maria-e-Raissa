@@ -193,11 +193,11 @@ main {
 }
 
 .promocoes-carrosel .prev {
-    left: 0;
+    left: 10px; /* Posicionamento à esquerda */
 }
 
 .promocoes-carrosel .next {
-    right: 0;
+    right: 10px; /* Posicionamento à direita */
 }
 
 
