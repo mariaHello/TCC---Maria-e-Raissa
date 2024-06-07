@@ -146,48 +146,48 @@ main {
 
 
 .promocoes-carrosel {
-        position: relative;
-        overflow: hidden;
-        margin-bottom: 20px;
-        width: 100%;
-    }
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
 
-    .promo-container {
-        display: flex;
-        transition: transform 0.5s ease;
-    }
+.promo-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 10px; /* Adiciona espaçamento entre os itens */
+}
 
-    .promo-item {
-        flex: 0 0 100%;
-    }
+.promo-item {
+    flex: 0 0 calc(33.33% - 10px); /* Largura dinâmica para cada item */
+}
 
-    .promo-item img {
-        width: 100%;
-        height: auto;
-    }
+.promo-item img {
+    width: 100%; /* Imagens responsivas */
+    height: auto;
+}
 
-    .promocoes-carrosel .prev,
-    .promocoes-carrosel .next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(255, 255, 255, 0.5);
-        border: none;
-        color: #333;
-        font-size: 18px;
-        padding: 10px;
-        cursor: pointer;
-        z-index: 1;
-    }
+.promocoes-carrosel .prev,
+.promocoes-carrosel .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+}
 
-    .promocoes-carrosel .prev {
-        left: 20px;
-    }
+.promocoes-carrosel .prev {
+    left: 0;
+}
 
-    .promocoes-carrosel .next {
-        right: 5px;
-    }
-
+.promocoes-carrosel .next {
+    right: 0;
+}
 
 footer {
     background-color: #30168b; /* Altera a cor de fundo do rodapé */
