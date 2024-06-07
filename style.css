@@ -176,7 +176,6 @@ main {
 .promocoes-carrosel .next {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     background-color: rgba(255, 255, 255, 0.5);
     border: none;
     color: #333;
@@ -194,10 +193,12 @@ main {
 
 .promocoes-carrosel .prev {
     left: 10px; /* Posicionamento à esquerda */
+    transform: translateY(-50%);
 }
 
 .promocoes-carrosel .next {
     right: 10px; /* Posicionamento à direita */
+    transform: translateY(-50%);
 }
 
 
