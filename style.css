@@ -143,6 +143,8 @@ main {
     display: flex; /* Torna o contêiner de restaurantes um flex container */
     justify-content: space-between; /* Distribui o espaço entre os itens */
 }
+
+
 .promocoes-carrosel {
     position: relative;
     overflow: hidden;
