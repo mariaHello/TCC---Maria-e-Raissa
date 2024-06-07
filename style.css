@@ -3,7 +3,7 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    display: flex; /* Permite que os elementos ocupem todo o espaço vertical disponível */
+    display: flex; /* Permite que os elementos ocupem todo o espaÃ§o vertical disponÃ­vel */
     flex-direction: column; /* Organiza os elementos verticalmente */
     min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da tela */
 }
@@ -12,19 +12,19 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    padding-right: 400px; /* Adiciona espaço à direita do contêiner */
+    padding-right: 100px; /* Adiciona espaÃ§o Ã  direita do contÃªiner */
 }
 
-/* Cabeçalho */
+/* CabeÃ§alho */
 header {
-    background-color: #2a1289; /* Altera a cor de fundo do cabeçalho */
-     padding: 15px;
-    text-align: center; /* Centraliza o conteúdo do cabeçalho */
+    background-color: #30168b; /* Altera a cor de fundo do cabeÃ§alho */
+    padding: 20px 0;
+    text-align: center; /* Centraliza o conteÃºdo do cabeÃ§alho */
 }
 
 .logohome {
-    height: 150px; /* Ajuste a altura da logo conforme necessário */
-    margin-left: 5px; /* Ajuste a margem esquerda conforme necessário */
+	height: 150px; /* Ajuste a altura da logo conforme necessário */
+	margin-left: 5px; /* Ajuste a margem esquerda conforme necessário */
 }
 
 .title-search {
@@ -36,9 +36,9 @@ header {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #FEF47F; /* Altera a cor do título para #f5e8a0 */
+    color: #FEF47F; /* Altera a cor do tÃ­tulo para #f5e8a0 */
     text-decoration: none; /* Remove sublinhado dos links */
-    margin-right: left;
+    margin-right: auto;
 }
 
 
@@ -48,7 +48,7 @@ header {
     background-color: #fff;
     border-radius: 20px;
     overflow: hidden;
-    margin-left: auto; /* Empurra o formulário para a direita */
+    margin-left: auto; /* Empurra o formulÃ¡rio para a direita */
 }
 
 
@@ -64,7 +64,7 @@ header {
     color: #fff;
     border: none;
     padding: 10px 20px;
-    border-radius: 0 20px 20px 0; /* Adiciona bordas arredondadas apenas no botão direito */
+    border-radius: 0 20px 20px 0; /* Adiciona bordas arredondadas apenas no botÃ£o direito */
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -78,7 +78,7 @@ header {
 }
 
 nav {
-    margin-top: 20px; /* Espaçamento entre o logotipo e as abas */
+    margin-top: 20px; /* EspaÃ§amento entre o logotipo e as abas */
 }
 
 nav ul {
@@ -89,11 +89,11 @@ nav ul {
 
 nav li {
     display: inline-block; /* Exibe os itens da lista em linha */
-    margin-right: 20px; /* Espaçamento entre os itens da lista */
+    margin-right: 20px; /* EspaÃ§amento entre os itens da lista */
 }
 
 nav li:last-child {
-    margin-right: 0; /* Remove o espaçamento do último item da lista */
+    margin-right: 0; /* Remove o espaÃ§amento do Ãºltimo item da lista */
 }
 
 .top-box {
@@ -119,95 +119,100 @@ main {
 }
 
 .featured-restaurants {
-    background-color: #FEF47F; /* Altera o background da região em destaque */
+    background-color: #FEF47F; /* Altera o background da regiÃ£o em destaque */
     padding: 20px;
     border-radius: 10px;
-    text-align: center; /* Centraliza o conteúdo */
+    text-align: center; /* Centraliza o conteÃºdo */
     margin: 50px auto 0; /* Adiciona margem superior maior e centraliza horizontalmente */
 }
 
 .restaurant-box {
-    flex: 0 1 calc(30% - 20px); /* Define a largura flexível das caixas dos restaurantes e desconta a margem */
+    flex: 0 1 calc(30% - 20px); /* Define a largura flexÃ­vel das caixas dos restaurantes e desconta a margem */
     margin: 0 10px; /* Adiciona margem entre as caixas dos restaurantes */
-    text-align: center; /* Centraliza o conteúdo */
+    text-align: center; /* Centraliza o conteÃºdo */
     box-sizing: border-box; /* Inclui a borda e o preenchimento na largura e na altura */
 }
 
 .restaurant-box:hover img {
     transform: scale(1.1); /* Aumenta a escala da imagem em 10% quando o mouse estiver sobre ela */
-    transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito */
+    transition: transform 0.3s ease; /* Adiciona uma transiÃ§Ã£o suave para o efeito */
 }
 
 
 .restaurants {
-    display: flex; /* Torna o contêiner de restaurantes um flex container */
-    justify-content: space-between; /* Distribui o espaço entre os itens */
+    display: flex; /* Torna o contÃªiner de restaurantes um flex container */
+    justify-content: space-between; /* Distribui o espaÃ§o entre os itens */
 }
 
-
 .promocoes-carrosel {
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 20px;
-    width: 80%;
-    margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 20px;
+	width: 80%;
+	margin: 0 auto;
 }
 
 .promo-container {
-    display: flex;
-    transition: transform 0.5s ease;
-    gap: 10px; /* Adiciona espaçamento entre os itens */
+	display: flex;
+	transition: transform 0.5s ease;
+	gap: 10px; /* Adiciona espaçamento entre os itens */
 }
 
 .promo-item {
-    flex: 0 0 calc(33.33% - 10px); /* Largura dinâmica para cada item */
-    border-radius: 10px; /* Borda arredondada */
-    overflow: hidden; /* Garante que a borda arredondada seja aplicada */
+	flex: 0 0 calc(33.33% - 10px); /* Largura dinâmica para cada item */
+	border-radius: 10px; /* Borda arredondada */
+	overflow: hidden; /* Garante que a borda arredondada seja aplicada */
 }
 
 .promo-item img {
-    width: 100%; /* Imagens responsivas */
-    height: auto;
-    border-radius: 10px; /* Borda arredondada */
-    overflow: hidden; /* Garante que a borda arredondada seja aplicada */
+	width: 100%; /* Imagens responsivas */
+	height: auto;
+	border-radius: 10px; /* Borda arredondada */
+	overflow: hidden; /* Garante que a borda arredondada seja aplicada */
 }
 
 .promocoes-carrosel .prev,
 .promocoes-carrosel .next {
-    position: absolute;
-    top: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: none;
-    color: #333;
-    font-size: 18px;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%; /* Borda arredondada para os botões */
-    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+	position: absolute;
+	top: 50%;
+	background-color: rgba(255, 255, 255, 0.5);
+	border: none;
+	color: #333;
+	font-size: 18px;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 50%; /* Borda arredondada para os botões */
+	transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
 }
 
 .promocoes-carrosel .prev:hover,
 .promocoes-carrosel .next:hover {
-    background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo ao passar o mouse */
+	background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo ao passar o mouse */
 }
 
 .promocoes-carrosel .prev {
-    left: 10px; /* Posicionamento à esquerda */
-    transform: translateY(-50%);
+	left: 10px; /* Posicionamento à esquerda */
+	transform: translateY(-50%);
 }
 
 .promocoes-carrosel .next {
-    right: 10px; /* Posicionamento à direita */
-    transform: translateY(-50%);
+	right: 10px; /* Posicionamento à direita */
+	transform: translateY(-50%);
 }
 
 
+.logo-subway {
+    max-width: 450px; /* Define a largura mÃ¡xima das imagens */
+    height: auto; /* MantÃ©m a proporÃ§Ã£o da imagem */
+    margin-bottom: 10px; /* Adiciona espaÃ§o entre a imagem e o texto */
+}
+
 footer {
-    background-color: #30168b; /* Altera a cor de fundo do rodapé */
+    background-color: #30168b; /* Altera a cor de fundo do rodapÃ© */
     padding: 20px 0;
     text-align: center;
-    width: 100%; /* Garante que o rodapé ocupe a largura total da tela */
-    bottom: 0; /* Alinha o rodapé à parte inferior da janela de visualização */
+    width: 100%; /* Garante que o rodapÃ© ocupe a largura total da tela */
+    bottom: 0; /* Alinha o rodapÃ© Ã  parte inferior da janela de visualizaÃ§Ã£o */
 }
 
 footer p {
