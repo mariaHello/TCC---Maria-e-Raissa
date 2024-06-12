@@ -19,9 +19,6 @@ body {
 header {
     background-color: #2a1289; /* Altera a cor de fundo do cabeçalho */
     padding: 0; /* Remove padding para que a altura do cabeçalho seja exata */
-    display: flex; /* Utiliza Flexbox para alinhar o conteúdo */
-    justify-content: space-between; /* Espaça os elementos do cabeçalho */
-    align-items: center; /* Centraliza verticalmente */
     height: 100px; /* Altura do cabeçalho */
 }
 
