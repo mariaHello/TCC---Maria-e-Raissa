@@ -20,8 +20,6 @@ header {
     background-color: #2a1289; /* Altera a cor de fundo do cabeçalho */
     padding: 0 20px; /* Adiciona padding horizontal para espaçamento */
     height: 100px; /* Altura do cabeçalho */
-    display: flex;
-    align-items: center; /* Centraliza verticalmente os itens no cabeçalho */
 }
 
 .search-bar {
