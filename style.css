@@ -17,15 +17,17 @@ body {
 
 /* CabeÃ§alho */
 header {
-    background-color: #2a1289; /* Altera a cor de fundo do cabeÃ§alho */
-    padding: 20px 0;
-    text-align: center; /* Centraliza o conteÃºdo do cabeÃ§alho */
-	height: 100px;
+    background-color: #2a1289; /* Altera a cor de fundo do cabeçalho */
+    padding: 0; /* Remove padding para que a altura do cabeçalho seja exata */
+    display: flex; /* Utiliza Flexbox para alinhar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100px; /* Altura do cabeçalho */
 }
 
 .logohome {
-	height: 150px; /* Ajuste a altura da logo conforme necessário */
-	margin-left: 5px; /* Ajuste a margem esquerda conforme necessário */
+    height: 80px; /* Ajusta a altura da logo para caber no cabeçalho */
+    margin-left: 5px; /* Ajuste a margem esquerda conforme necessário */
 }
 
 .title-search {
