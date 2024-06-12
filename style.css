@@ -20,6 +20,7 @@ header {
     background-color: #2a1289; /* Altera a cor de fundo do cabeÃ§alho */
     padding: 20px 0;
     text-align: center; /* Centraliza o conteÃºdo do cabeÃ§alho */
+	heigth: 100px;
 }
 
 .logohome {
