@@ -18,13 +18,80 @@ body {
 /* Cabeçalho */
 header {
     background-color: #2a1289; /* Altera a cor de fundo do cabeçalho */
-    padding: 0; /* Remove padding para que a altura do cabeçalho seja exata */
+    padding: 0 20px; /* Adiciona padding horizontal para espaçamento */
     height: 100px; /* Altura do cabeçalho */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente os itens no cabeçalho */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 60%; /* Ajusta a altura da barra de pesquisa para 60% da altura do cabeçalho */
+    flex-grow: 1;
+    margin: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para profundidade */
+}
+
+.search-bar input[type="text"] {
+    flex: 1;
+    padding: 10px 15px; /* Ajusta o padding para um melhor espaçamento */
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 8px 0 0 8px; /* Adiciona bordas arredondadas na entrada de texto */
+    height: 100%; /* Garante que o input ocupe toda a altura da barra de pesquisa */
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: #aaa; /* Cor do placeholder */
+}
+
+.search-bar button {
+    background-color: #b29af3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 100%; /* Garante que o botão ocupe toda a altura da barra de pesquisa */
+}
+
+.search-bar button:hover {
+    background-color: #8a6bc8;
+}
+
+.search-bar button:focus {
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    .search-bar {
+        margin: 10px 0; /* Ajusta a margem em telas menores */
+        flex-direction: column; /* Empilha os elementos verticalmente em telas pequenas */
+        align-items: stretch;
+        height: auto; /* Permite que a altura se ajuste automaticamente */
+    }
+
+    .search-bar input[type="text"], .search-bar button {
+        border-radius: 8px; /* Bordas arredondadas em todos os lados */
+        width: 100%; /* Ocupa toda a largura */
+        margin: 5px 0; /* Espaçamento entre os elementos */
+        height: 40px; /* Altura fixa para os elementos empilhados */
+    }
+
+    .search-bar button {
+        border-radius: 0 0 8px 8px; /* Ajusta as bordas arredondadas */
+    }
 }
 
 .logohome {
     height: 80px; /* Ajusta a altura da logo para caber no cabeçalho */
-    margin-left: 0px; /* Ajuste a margem esquerda conforme necessário */
+    margin-left: 60px; /* Ajuste a margem esquerda conforme necessário */
 }
 
 .title-search {
@@ -35,41 +102,7 @@ header {
     padding: 0 20px;
 }
 
-.search-bar {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    flex-grow: 1; /* Permite que a barra de pesquisa cresça */
-    margin: 0 20px; /* Espaçamento ao redor da barra de pesquisa */
-}
 
-.search-bar input[type="text"] {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-}
-
-.search-bar button {
-    background-color: #b29af3;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 0 8px 8px 0; /* Adiciona bordas arredondadas apenas no botão direito */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.search-bar button:hover {
-    background-color: #8a6bc8;
-}
-
-.search-bar button:focus {
-    outline: none;
-}
 
 nav {
     margin-top: 20px; /* Espaçamento entre o logotipo e as abas */
