@@ -37,6 +37,81 @@ header {
     color: #aaa; /* Cor do placeholder */
 }
 
+/* Cabeçalho */
+header {
+    background-color: #2a1289; /* Altera a cor de fundo do cabeçalho */
+    height: 100px; /* Altura do cabeçalho */
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.title-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logohome {
+    height: 80px; /* Ajusta a altura da logo para caber no cabeçalho */
+    margin-right: 20px; /* Espaçamento entre a logo e a navegação */
+}
+
+.cabecalho__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 20px; /* Espaçamento entre a lista e os outros elementos */
+}
+
+.lista__link a {
+    text-decoration: none;
+    color: #fff680; /* Fonte */
+    margin-left: 1em;
+}
+
+.lista__link a:hover {
+    color: #f54747; /* Contraste do link ao passar o mouse */
+}
+
+.lista__link a:active {
+    color: #fff680;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 378.61px; /* Define a largura exata da barra de pesquisa */
+    height: 48px; /* Define a altura exata da barra de pesquisa */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para profundidade */
+}
+
+.search-bar input[type="text"] {
+    flex: 1;
+    padding: 10px 15px; /* Ajusta o padding para um melhor espaçamento */
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 8px 0 0 8px; /* Adiciona bordas arredondadas na entrada de texto */
+    height: 100%; /* Garante que o input ocupe toda a altura da barra de pesquisa */
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: #aaa; /* Cor do placeholder */
+}
+
 .search-bar button {
     background-color: #b29af3;
     color: #fff;
@@ -75,42 +150,6 @@ header {
     .search-bar button {
         border-radius: 0 0 8px 8px; /* Ajusta as bordas arredondadas */
     }
-}
-
-
-.logohome {
-    height: 80px; /* Ajusta a altura da logo para caber no cabeçalho */
-}
-
-.title-search {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 20px;
-}
-
-
-.cabecalho__lista {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
-    margin-top: 1em;
-}
-
-.lista__link {
-    text-decoration: none;
-    color: #fff680; /* Fonte */
-    margin-left: 1em;
-}
-
-.lista__link a:hover {
-    color: #f54747; /* Contraste do link ao passar o mouse */
-}
-
-.lista__link a:active {
-    color: #fff680;
 }
 
 nav {
