@@ -8,13 +8,6 @@ body {
     min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da tela */
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    padding-right: 100px; /* Adiciona espaço à direita do contêiner */
-}
-
 /* Cabeçalho */
 header {
     background-color: #2a1289; /* Altera a cor de fundo do cabeçalho */
