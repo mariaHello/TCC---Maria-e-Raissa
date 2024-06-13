@@ -229,20 +229,6 @@ main {
     transform: translateY(-50%);
 }
 
-.logo-subway {
-    max-width: 450px; /* Define a largura máxima das imagens */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-bottom: 10px; /* Adiciona espaço entre a imagem e o texto */
-}
-
-footer {
-    background-color: #30168b; /* Altera a cor de fundo do rodapé */
-    padding: 20px 0;
-    text-align: center;
-    width: 100%; /* Garante que o rodapé ocupe a largura total da tela */
-    bottom: 0; /* Alinha o rodapé à parte inferior da janela de visualização */
-}
-
 .rodape {
     text-align: center;
     margin: 5em 3em;
