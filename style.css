@@ -234,12 +234,21 @@ main {
     margin: 5em 3em;
     background-color: #2a1289; /* Fundo */
     color: #fff680; /* Fonte */
+    padding: 2em 0;
+}
+
+.rodape__logo {
+    max-width: 150px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    display: block;
+    margin: 0 auto 1em auto;
 }
 
 .rodape__lista {
     display: flex;
     justify-content: center;
     list-style-type: none;
+    padding: 0;
     margin-top: 1em;
 }
 
@@ -253,6 +262,7 @@ main {
     margin: 1em 0;
     color: #fff680; /* Fonte */
     font-size: 14px;
+    padding: 0 1em;
 }
 
 .lista__link a:hover {
