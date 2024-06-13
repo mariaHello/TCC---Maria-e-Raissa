@@ -225,17 +225,15 @@ main {
     text-align: center;
     background-color: #2a1289; /* Fundo */
     color: #fff680; /* Fonte */
-    padding: 2em 0;
 }
 .rodape__logo {
     max-width: 150px; /* Ajuste o tamanho conforme necessário */
-    height: auto;
+    height: center;
 }
 .rodape__lista {
     display: flex;
     justify-content: center;
     list-style-type: none;
-    padding: 0;
 }
 
 .lista__link a {
@@ -246,7 +244,6 @@ main {
 .rodape__texto {
     color: #fff680; /* Fonte */
     font-size: 14px;
-    padding: 0 1em;
 }
 
 .lista__link a:hover {
@@ -255,9 +252,4 @@ main {
 
 .lista__link a:active {
     color: #fff680;
-}
-
-.container__botao:hover {
-    background-color: #f54747; /* Contraste do link ao passar o mouse */
-    color: #2a1289; /* Cor do fundo para contraste */
 }
