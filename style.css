@@ -1,8 +1,6 @@
 /* Estilo geral */
 body {
     font-family: sans-serif;
-    margin: 0;
-    padding: 0;
     display: flex; /* Permite que os elementos ocupem todo o espaço vertical disponível */
     flex-direction: column; /* Organiza os elementos verticalmente */
     min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da tela */
@@ -11,7 +9,6 @@ body {
 /* Cabeçalho */
 header {
     background-color: #2a1289; /* Altera a cor de fundo do cabeçalho */
-    padding: 0 20px; /* Adiciona padding horizontal para espaçamento */
     height: 100px; /* Altura do cabeçalho */
 }
 
@@ -23,7 +20,6 @@ header {
     overflow: hidden;
     height: 60%; /* Ajusta a altura da barra de pesquisa para 60% da altura do cabeçalho */
     flex-grow: 1;
-    margin: 0 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para profundidade */
 }
 
@@ -82,7 +78,6 @@ header {
 
 .logohome {
     height: 80px; /* Ajusta a altura da logo para caber no cabeçalho */
-    margin-left: 60px; /* Ajuste a margem esquerda conforme necessário */
 }
 
 .title-search {
@@ -232,13 +227,10 @@ main {
     color: #fff680; /* Fonte */
     padding: 2em 0;
 }
-
 .rodape__logo {
     max-width: 150px; /* Ajuste o tamanho conforme necessário */
     height: auto;
-    display: block;
 }
-
 .rodape__lista {
     display: flex;
     justify-content: center;
