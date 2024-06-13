@@ -18,8 +18,8 @@ header {
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
-    height: 60%; /* Ajusta a altura da barra de pesquisa para 60% da altura do cabeçalho */
-    flex-grow: 1;
+    width: 378.61px; /* Define a largura exata da barra de pesquisa */
+    height: 48px; /* Define a altura exata da barra de pesquisa */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para profundidade */
 }
 
@@ -61,6 +61,7 @@ header {
         margin: 10px 0; /* Ajusta a margem em telas menores */
         flex-direction: column; /* Empilha os elementos verticalmente em telas pequenas */
         align-items: stretch;
+        width: auto; /* Permite que a largura se ajuste automaticamente em telas pequenas */
         height: auto; /* Permite que a altura se ajuste automaticamente */
     }
 
@@ -75,6 +76,7 @@ header {
         border-radius: 0 0 8px 8px; /* Ajusta as bordas arredondadas */
     }
 }
+
 
 .logohome {
     height: 80px; /* Ajusta a altura da logo para caber no cabeçalho */
