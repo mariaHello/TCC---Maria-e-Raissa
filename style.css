@@ -101,6 +101,27 @@ header {
 }
 
 
+.cabecalho__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1em;
+}
+
+.lista__link {
+    text-decoration: none;
+    color: #fff680; /* Fonte */
+    margin-left: 1em;
+}
+
+.lista__link a:hover {
+    color: #f54747; /* Contraste do link ao passar o mouse */
+}
+
+.lista__link a:active {
+    color: #fff680;
+}
 
 nav {
     margin-top: 20px; /* Espaçamento entre o logotipo e as abas */
@@ -119,23 +140,6 @@ nav li {
 
 nav li:last-child {
     margin-right: 0; /* Remove o espaçamento do último item da lista */
-}
-
-.top-box {
-    display: inline-block;
-    background-color: #b29af3;
-    color: #30198f;
-    padding: 10px 20px;
-    border-radius: 10px; /* Adiciona bordas arredondadas */
-    text-decoration: none;
-}
-
-.top-box:hover {
-    background-color: #8a6bc8;
-}
-
-.top-box:active {
-    background-color: #634c94;
 }
 
 main {
@@ -270,7 +274,7 @@ main {
 }
 
 .lista__link a:active {
-    color: purple; /* Esta cor não foi especificada, mantida conforme original */
+    color: #fff680;
 }
 
 .container__botao:hover {
