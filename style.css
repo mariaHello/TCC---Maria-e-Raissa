@@ -232,6 +232,8 @@ main {
 .rodape {
     text-align: center;
     margin: 5em 3em;
+    background-color: #2a1289; /* Fundo */
+    color: #fff680; /* Fonte */
 }
 
 .rodape__lista {
@@ -241,27 +243,27 @@ main {
     margin-top: 1em;
 }
 
-.lista__link a{
+.lista__link a {
     text-decoration: none;
-    color: var(--branco-principal);
+    color: #fff680; /* Fonte */
     margin-left: 1em;
 }
 
 .rodape__texto {
     margin: 1em 0;
-    color: var(--cinza-secundario);
+    color: #fff680; /* Fonte */
     font-size: 14px;
 }
 
 .lista__link a:hover {
-    color: var(--botao-azul);
+    color: #f54747; /* Contraste do link ao passar o mouse */
 }
 
 .lista__link a:active {
-    color: purple;
+    color: purple; /* Esta cor não foi especificada, mantida conforme original */
 }
 
 .container__botao:hover {
-    background-color: var(--botao-azul-efeito);
-    color: var(--cor-de-fundo);
+    background-color: #f54747; /* Contraste do link ao passar o mouse */
+    color: #2a1289; /* Cor do fundo para contraste */
 }
