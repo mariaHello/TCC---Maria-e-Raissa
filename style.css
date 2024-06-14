@@ -18,8 +18,8 @@ header {
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
-    width: 378.61px; /* Define a largura exata da barra de pesquisa */
-    height: 48px; /* Define a altura exata da barra de pesquisa */
+    width: 450px; /* Define a largura exata da barra de pesquisa */
+    height:55px; /* Define a altura exata da barra de pesquisa */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para profundidade */
 }
 
