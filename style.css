@@ -8,7 +8,7 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #ffd77e; /* Altera a cor de fundo do cabeçalho */
+    background-color: #f54747; /* Altera a cor de fundo do cabeçalho */
     height: 100px; /* Altura do cabeçalho */
 }
 
@@ -39,7 +39,7 @@ header {
 
 /* Cabeçalho */
 header {
-    background-color: #2a1289; /* Altera a cor de fundo do cabeçalho */
+    background-color: #f54747; /* Altera a cor de fundo do cabeçalho */
     height: 100px; /* Altura do cabeçalho */
     display: flex;
     align-items: center;
@@ -75,12 +75,12 @@ header {
 
 .lista__link a {
     text-decoration: none;
-    color: #fff680; /* Fonte */
+    color: #d40000; /* Fonte */
     margin-left: 1em;
 }
 
 .lista__link a:hover {
-    color: #f54747; /* Contraste do link ao passar o mouse */
+    color: #fff680; /* Contraste do link ao passar o mouse */
 }
 
 .lista__link a:active {
@@ -113,7 +113,7 @@ header {
 }
 
 .search-bar button {
-    background-color: #b29af3;
+    background-color: #fff680;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -124,7 +124,7 @@ header {
 }
 
 .search-bar button:hover {
-    background-color: #8a6bc8;
+    background-color: #d40000;
 }
 
 .search-bar button:focus {
@@ -264,13 +264,10 @@ main {
 
 .rodape {
     text-align: center;
-    background-color: #ffd77e; /* Fundo */
-    color: #fff680; /* Fonte */
+    background-color: #f54747; /* Fundo */
+    color: #d40000; /* Fonte */
 }
-.rodape__logo {
-    max-width: 150px; /* Ajuste o tamanho conforme necessário */
-    height: center;
-}
+
 .rodape__lista {
     display: flex;
     justify-content: center;
@@ -279,7 +276,7 @@ main {
 
 .lista__link a {
     text-decoration: none;
-    color: #fff680; /* Fonte */
+    color: #d40000; /* Fonte */
 }
 
 .rodape__texto {
