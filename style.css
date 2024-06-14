@@ -8,7 +8,7 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #2a1289; /* Altera a cor de fundo do cabeçalho */
+    background-color: #ffd77e; /* Altera a cor de fundo do cabeçalho */
     height: 100px; /* Altura do cabeçalho */
 }
 
@@ -264,7 +264,7 @@ main {
 
 .rodape {
     text-align: center;
-    background-color: #2a1289; /* Fundo */
+    background-color: #ffd77e; /* Fundo */
     color: #fff680; /* Fonte */
 }
 .rodape__logo {
@@ -283,12 +283,12 @@ main {
 }
 
 .rodape__texto {
-    color: #fff680; /* Fonte */
+    color: #d40000; /* Fonte */
     font-size: 14px;
 }
 
 .lista__link a:hover {
-    color: #f54747; /* Contraste do link ao passar o mouse */
+    color: #fff680; /* Contraste do link ao passar o mouse */
 }
 
 .lista__link a:active {
