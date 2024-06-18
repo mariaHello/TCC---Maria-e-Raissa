@@ -8,7 +8,7 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #f54747; /* Altera a cor de fundo do cabeçalho */
+    background-color: #2a1289; /* Altera a cor de fundo do cabeçalho */
     height: 100px; /* Altura do cabeçalho */
 }
 
@@ -39,7 +39,7 @@ header {
 
 /* Cabeçalho */
 header {
-    background-color: #f54747; /* Altera a cor de fundo do cabeçalho */
+    background-color: #2a1289; /* Altera a cor de fundo do cabeçalho */
     height: 100px; /* Altura do cabeçalho */
     display: flex;
     align-items: center;
@@ -264,7 +264,7 @@ main {
 
 .rodape {
     text-align: center;
-    background-color: #f54747; /* Fundo */
+    background-color: #2a1289; /* Fundo */
     color: #d40000; /* Fonte */
 }
 
