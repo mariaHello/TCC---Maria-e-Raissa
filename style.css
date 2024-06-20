@@ -201,6 +201,14 @@ main {
     justify-content: space-between; /* Distribui o espaço entre os itens */
 }
 
+.gifpromo {
+    display: block;
+    margin: 0 auto;
+    width: 533.328px;
+    height: 300px;
+}
+
+
 .promocoes {
     display: block;
     margin: 0 auto;
