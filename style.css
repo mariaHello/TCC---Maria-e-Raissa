@@ -285,9 +285,9 @@ main {
 }
 
 .lista__link a:hover {
-    color: #000000; /* Contraste do link ao passar o mouse */
+    color: #ff8484; /* Contraste do link ao passar o mouse */
 }
 
 .lista__link a:active {
-    color: #000000;
+    color: #ff8484;
 }
