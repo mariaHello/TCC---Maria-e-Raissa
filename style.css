@@ -211,13 +211,11 @@ main {
 
 .promocoes {
     display: block;
-    margin: 0 auto;
 }
 
 .promocoes-carrosel {
     position: relative;
     overflow: hidden;
-    margin-bottom: 20px;
     width: 80%;
     margin: 0 auto;
 }
