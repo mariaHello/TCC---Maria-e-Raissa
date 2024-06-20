@@ -276,18 +276,18 @@ main {
 
 .lista__link a {
     text-decoration: none;
-    color: #d40000; /* Fonte */
+    color: #fff680; /* Fonte */
 }
 
 .rodape__texto {
-    color: #d40000; /* Fonte */
+    color: #fff680; /* Fonte */
     font-size: 14px;
 }
 
 .lista__link a:hover {
-    color: #fff680; /* Contraste do link ao passar o mouse */
+    color: #000000; /* Contraste do link ao passar o mouse */
 }
 
 .lista__link a:active {
-    color: #fff680;
+    color: #000000;
 }
