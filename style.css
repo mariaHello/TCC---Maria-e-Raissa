@@ -204,6 +204,8 @@ main {
 .promocoes {
     display: block;
     margin: 0 auto;
+    width: 533.328px;
+    height: 300px;
 }
 
 .promocoes-carrosel {
