@@ -259,19 +259,21 @@ main {
 .promocoes-carrosel .next {
     position: absolute;
     top: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
     border: none;
-    color: #333;
-    font-size: 18px;
-    padding: 10px;
+    color: #fff; /* Cor do texto branca */
+    font-size: 24px; /* Aumenta o tamanho da fonte */
+    padding: 15px; /* Aumenta o padding */
     cursor: pointer;
     border-radius: 50%; /* Borda arredondada para os botões */
-    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave para a cor de fundo e transformação */
+    z-index: 1; /* Garante que os botões fiquem sobrepostos às imagens */
 }
 
 .promocoes-carrosel .prev:hover,
 .promocoes-carrosel .next:hover {
-    background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo ao passar o mouse */
+    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo ao passar o mouse */
+    transform: scale(1.1); /* Leve aumento no tamanho ao passar o mouse */
 }
 
 .promocoes-carrosel .prev {
