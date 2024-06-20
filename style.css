@@ -211,12 +211,14 @@ main {
 
 .promocoes {
     display: block;
+    width: 100%;
 }
 
 .promocoes-carrosel {
     position: relative;
     overflow: hidden;
-    width: 80%;
+    width: 1880px;
+    height: 302.33px;
     margin: 0 auto;
 }
 
@@ -227,7 +229,7 @@ main {
 }
 
 .promo-item {
-    flex: 0 0 calc(33.33% - 10px); /* Largura dinâmica para cada item */
+    flex: 0 0 calc((1880px / 3) - 10px); /* Calcula a largura dinâmica para cada item */
     border-radius: 10px; /* Borda arredondada */
     overflow: hidden; /* Garante que a borda arredondada seja aplicada */
 }
