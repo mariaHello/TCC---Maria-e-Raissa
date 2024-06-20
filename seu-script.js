@@ -32,3 +32,13 @@ promoContainer.addEventListener('transitionend', () => {
         promoContainer.style.transform = `translateX(-${counter * itemWidth}px)`;
     }
 });
+
+// Função para iniciar o auto-play do carrossel
+function startAutoPlay() {
+    setInterval(() => {
+        nextSlide();
+    }, 3000); // Altera para o próximo slide a cada 3 segundos
+}
+
+// Inicia o auto-play quando a página é carregada
+window.onload = startAutoPlay;
