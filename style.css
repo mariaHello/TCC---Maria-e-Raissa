@@ -202,6 +202,45 @@ main {
     justify-content: space-between; /* Distribui o espaço entre os itens */
 }
 
+/* Estilização das imagens e efeito de hover */
+.home-img {
+    display: flex;
+    overflow-x: auto; /* Permite rolar horizontalmente caso as imagens não caibam */
+    scrollbar-width: none; /* Remove a barra de rolagem padrão do navegador */
+    -ms-overflow-style: none; /* Remove a barra de rolagem do Internet Explorer */
+}
+
+.home-imagem {
+    display: flex;
+}
+
+.img-icone {
+    margin-right: 10px; /* Espaçamento entre as imagens */
+}
+
+.img-icone img {
+    width: 100px; /* Largura das imagens */
+    height: auto; /* Altura automática para manter a proporção */
+    border-radius: 5px; /* Borda arredondada */
+    transition: filter 0.3s ease; /* Transição suave */
+}
+
+/* Efeito de hover */
+.img-icone img:hover {
+    filter: brightness(80%); /* Reduz o brilho da imagem ao passar o mouse */
+}
+
+/* Adiciona borda vermelha ao passar o mouse */
+.img-icone img:hover {
+    border: 2px solid red;
+}
+
+/* Esconde a barra de rolagem */
+.home-img::-webkit-scrollbar {
+    display: none;
+}
+
+
 .gifpromo {
     display: block;
     margin: 0 auto;
