@@ -218,7 +218,7 @@ main {
     position: relative;
     overflow: hidden;
     width: 1880px;
-    height: 350px;
+    height: 302.33px;
     margin: 0 auto;
 }
 
@@ -239,6 +239,20 @@ main {
     height: auto;
     border-radius: 10px; /* Borda arredondada */
     overflow: hidden; /* Garante que a borda arredondada seja aplicada */
+    transition: transform 0.3s ease; /* Suave transição para a animação */
+}
+
+.promo-item img:hover {
+    animation: bounce 0.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .promocoes-carrosel .prev,
@@ -269,6 +283,7 @@ main {
     right: 10px; /* Posicionamento à direita */
     transform: translateY(-50%);
 }
+
 
 .rodape {
     text-align: center;
