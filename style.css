@@ -201,36 +201,22 @@ main {
     display: flex; /* Torna o contêiner de restaurantes um flex container */
     justify-content: space-between; /* Distribui o espaço entre os itens */
 }
-
-/* Estilização da seção principal */
-.home {
-    display: flex;
-    justify-content: center; /* Alinha o conteúdo ao centro horizontalmente */
-    align-items: center; /* Alinha o conteúdo ao centro verticalmente */
-    height: 100vh; /* Define a altura para preencher a tela inteira */
-}
-
-/* Container das imagens */
+/* Estilização das imagens e efeito de hover */
 .home-img {
     display: flex;
-    justify-content: center; /* Alinha o conteúdo ao centro horizontalmente */
     overflow-x: auto; /* Permite rolar horizontalmente caso as imagens não caibam */
     scrollbar-width: none; /* Remove a barra de rolagem padrão do navegador */
     -ms-overflow-style: none; /* Remove a barra de rolagem do Internet Explorer */
 }
 
-/* Container interno das imagens */
 .home-imagem {
     display: flex;
-    justify-content: center; /* Alinha o conteúdo ao centro horizontalmente */
 }
 
-/* Container de cada imagem */
 .img-icone {
     margin-right: 10px; /* Espaçamento entre as imagens */
 }
 
-/* Estilização das imagens */
 .img-icone img {
     width: 100px; /* Largura das imagens */
     height: auto; /* Altura automática para manter a proporção */
@@ -241,13 +227,18 @@ main {
 /* Efeito de hover */
 .img-icone img:hover {
     filter: brightness(80%); /* Reduz o brilho da imagem ao passar o mouse */
-    border: 2px solid red; /* Adiciona borda vermelha ao passar o mouse */
+}
+
+/* Adiciona borda vermelha ao passar o mouse */
+.img-icone img:hover {
+    border: 2px solid red;
 }
 
 /* Esconde a barra de rolagem */
 .home-img::-webkit-scrollbar {
     display: none;
 }
+
 
 .gifpromo {
     display: block;
