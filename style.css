@@ -196,6 +196,8 @@ main {
     display: flex; /* Torna o contêiner de restaurantes um flex container */
     justify-content: space-between; /* Distribui o espaço entre os itens */
 }
+
+
 /* Estilização das imagens e efeito de hover */
 .home-img {
     display: flex;
@@ -215,7 +217,7 @@ main {
 }
 
 .img-icone img {
-    width: 100px;
+    width: 150px; /* Aumenta a largura das imagens */
     height: auto;
     border-radius: 5px;
     transition: filter 0.3s ease, border 0.3s ease; /* Transição suave */
@@ -229,6 +231,7 @@ main {
 .home-img::-webkit-scrollbar {
     display: none;
 }
+
 
 
 
