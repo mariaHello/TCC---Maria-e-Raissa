@@ -320,6 +320,80 @@ main {
 }
 
 
+.promocoes-carrosel2 {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Ajuste para 100% da largura do contêiner pai */
+    max-width: 1880px; /* Limita a largura máxima */
+    height: 400px;
+    margin: 0 auto;
+}
+
+.promo-container2 {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 10px; /* Adiciona espaçamento entre os itens */
+}
+
+.promo-item {
+    flex: 0 0 calc((100% / 4) - 10px); /* Calcula a largura dinâmica para cada item, ajustado para a largura total */
+    border-radius: 10px; /* Borda arredondada */
+    overflow: hidden; /* Garante que a borda arredondada seja aplicada */
+}
+
+.promo-item img {
+    width: 100%; /* Imagens responsivas */
+    height: auto;
+    border-radius: 10px; /* Borda arredondada */
+    overflow: hidden; /* Garante que a borda arredondada seja aplicada */
+    transition: transform 0.3s ease; /* Suave transição para a animação */
+}
+
+.promo-item img:hover {
+    animation: bounce 0.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.promocoes-carrosel2 .prev,
+.promocoes-carrosel2 .next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
+    border: none;
+    color: #fff; /* Cor do texto branca */
+    font-size: 24px; /* Aumenta o tamanho da fonte */
+    padding: 15px; /* Aumenta o padding */
+    cursor: pointer;
+    border-radius: 50%; /* Borda arredondada para os botões */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave para a cor de fundo e transformação */
+    z-index: 1; /* Garante que os botões fiquem sobrepostos às imagens */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+}
+
+.promocoes-carrosel2 .prev:hover,
+.promocoes-carrosel2 .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo ao passar o mouse */
+    transform: translateY(-50%) scale(1.1); /* Leve aumento no tamanho ao passar o mouse */
+}
+
+.promocoes-carrosel2 .prev {
+    left: 10px; /* Posicionamento à esquerda */
+}
+
+.promocoes-carrosel2 .next {
+    right: 10px; /* Posicionamento à direita */
+}
+
+
+
 .rodape {
     text-align: center;
     background-color: #2a1289; /* Fundo */
