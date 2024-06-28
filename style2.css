@@ -164,14 +164,6 @@ main {
     background-color: #fff680;
 }
 
-/* Estilo geral */
-body {
-    font-family: sans-serif;
-    display: flex; /* Permite que os elementos ocupem todo o espaço vertical disponível */
-    flex-direction: column; /* Organiza os elementos verticalmente */
-    min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da tela */
-}
-
 
 body {
     background: url('sobrenos.gif') no-repeat center center fixed;
