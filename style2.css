@@ -233,14 +233,15 @@ main {
 }
 
 
-.gifsobre {
-    display: block;
-    width: 1920px; /* Define a largura exata do GIF */
-    height: 907px; /* Define a altura exata do GIF */
-    max-width: 100%; /* Garante que o GIF não exceda a largura do contêiner */
-    height: auto; /* Mantém a proporção da altura do GIF */
+.texto_sobre {
+    text-align: justify;
+    margin-left: 0;
+    margin-right: auto;
+    padding: 20px;
+    width: 60%; /* Ajuste conforme necessário para o layout desejado */
+    box-sizing: border-box;
 }
-
+    
 .rodape {
     text-align: center;
     background-color: #2a1289; /* Fundo */
