@@ -221,7 +221,27 @@ main {
     width: 300px; /* Define a largura máxima do GIF */
     height: 200px; /* Define a altura máxima do GIF */
 }
+.rodape {
+    text-align: center;
+    background-color: #2a1289; /* Fundo */
+    color: #d40000; /* Fonte */
+}
 
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.lista__link a {
+    text-decoration: none;
+    color: #fff680; /* Fonte */
+}
+
+.rodape__texto {
+    color: #fff680; /* Fonte */
+    font-size: 14px;
+}
 
 .lista__link a:hover {
     color: #ff8484; /* Contraste do link ao passar o mouse */
