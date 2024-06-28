@@ -1,3 +1,13 @@
+const promoContainer1 = document.querySelector('.promo-container');
+const promoItems1 = document.querySelectorAll('.promo-container .promo-item');
+
+let counter1 = 1;
+const itemWidth1 = promoItems1[0].offsetWidth;
+
+// Clonar os primeiros e últimos itens para criar um efeito de looping
+promoContainer1.insertBefore(promoItems1[promoItems1.length - 1].cloneNode(true), promoItems1[0]);
+promoContainer1.appendChild(promoItems1[1].cloneNode(true));
+
 function updateTransform(container, counter, itemWidth) {
     container.style.transform = `translateX(-${counter * itemWidth}px)`;
 }
@@ -21,112 +31,38 @@ function prevSlide(containerSelector) {
 
     let counter = parseInt(container.getAttribute('data-counter')) || 1;
     counter--;
-    container.setAttribute('data-counter', counter);function updateTransform(container, counter, itemWidth) {
-    container.style.transform = `translateX(-${counter * itemWidth}px)`;
-}
-
-function nextSlide(containerSelector) {
-    const container = document.querySelector(containerSelector);
-    const items = container.querySelectorAll('.promo-item');
-    const itemWidth = items[0].offsetWidth;
-
-    let counter = parseInt(container.getAttribute('data-counter')) || 1;
-    counter++;
     container.setAttribute('data-counter', counter);
     container.style.transition = 'transform 0.5s ease';
     updateTransform(container, counter, itemWidth);
 }
 
-function prevSlide(containerSelector) {
-    const container = document.querySelector(containerSelector);
-    const items = container.querySelectorAll('.promo-item');
-    const itemWidth = items[0].offsetWidth;
+promoContainer1.setAttribute('data-counter', counter1);
+updateTransform(promoContainer1, counter1, itemWidth1);
 
-    let counter = parseInt(container.getAttribute('data-counter')) || 1;
-    counter--;
-    container.setAttribute('data-counter', counter);
-    container.style.transition = 'transform 0.5s ease';
-    updateTransform(container, counter, itemWidth);
-}
-
-document.querySelectorAll('.promo-container').forEach(container => {
-    const items = container.querySelectorAll('.promo-item');
-    const itemWidth = items[0].offsetWidth;
-
-    container.insertBefore(items[items.length - 1].cloneNode(true), items[0]);
-    container.appendChild(items[0].cloneNode(true));
-
-    container.setAttribute('data-counter', 1);
-
-    container.addEventListener('transitionend', () => {
-        let counter = parseInt(container.getAttribute('data-counter'));
-        if (counter >= items.length + 1) {
-            container.style.transition = 'none';
-            counter = 1;
-            container.setAttribute('data-counter', counter);
-            updateTransform(container, counter, itemWidth);
-        }
-        if (counter <= 0) {
-            container.style.transition = 'none';
-            counter = items.length;
-            container.setAttribute('data-counter', counter);
-            updateTransform(container, counter, itemWidth);
-        }
-    });
-
-    // Função para iniciar o auto-play do carrossel
-    function startAutoPlay(container) {
-        setInterval(() => {
-            nextSlide(`.${container.className}`);
-        }, 3000); // Altera para o próximo slide a cada 3 segundos
+promoContainer1.addEventListener('transitionend', () => {
+    let counter = parseInt(promoContainer1.getAttribute('data-counter'));
+    if (counter >= promoItems1.length + 1) {
+        promoContainer1.style.transition = 'none';
+        counter = 1;
+        promoContainer1.setAttribute('data-counter', counter);
+        updateTransform(promoContainer1, counter, itemWidth1);
     }
-
-    // Inicia o auto-play quando a página é carregada
-    window.onload = () => {
-        updateTransform(container, 1, itemWidth); // Inicializa a posição correta
-        startAutoPlay(container);
-    };
+    if (counter <= 0) {
+        promoContainer1.style.transition = 'none';
+        counter = promoItems1.length;
+        promoContainer1.setAttribute('data-counter', counter);
+        updateTransform(promoContainer1, counter, itemWidth1);
+    }
 });
 
-    container.style.transition = 'transform 0.5s ease';
-    updateTransform(container, counter, itemWidth);
+// Função para iniciar o auto-play do carrossel
+function startAutoPlay(container, interval = 3000) {
+    setInterval(() => {
+        nextSlide(`.${container.className}`);
+    }, interval); // Altera para o próximo slide a cada 3 segundos
 }
 
-document.querySelectorAll('.promo-container').forEach(container => {
-    const items = container.querySelectorAll('.promo-item');
-    const itemWidth = items[0].offsetWidth;
-
-    container.insertBefore(items[items.length - 1].cloneNode(true), items[0]);
-    container.appendChild(items[0].cloneNode(true));
-
-    container.setAttribute('data-counter', 1);
-
-    container.addEventListener('transitionend', () => {
-        let counter = parseInt(container.getAttribute('data-counter'));
-        if (counter >= items.length + 1) {
-            container.style.transition = 'none';
-            counter = 1;
-            container.setAttribute('data-counter', counter);
-            updateTransform(container, counter, itemWidth);
-        }
-        if (counter <= 0) {
-            container.style.transition = 'none';
-            counter = items.length;
-            container.setAttribute('data-counter', counter);
-            updateTransform(container, counter, itemWidth);
-        }
-    });
-
-    // Função para iniciar o auto-play do carrossel
-    function startAutoPlay(container) {
-        setInterval(() => {
-            nextSlide(`.${container.className}`);
-        }, 3000); // Altera para o próximo slide a cada 3 segundos
-    }
-
-    // Inicia o auto-play quando a página é carregada
-    window.onload = () => {
-        updateTransform(container, 1, itemWidth); // Inicializa a posição correta
-        startAutoPlay(container);
-    };
-});
+// Inicia o auto-play quando a página é carregada
+window.onload = () => {
+    startAutoPlay(promoContainer1);
+};
