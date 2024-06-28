@@ -21,7 +21,7 @@ header {
     border-radius: 8px;
     overflow: hidden;
     width: 450px; /* Define a largura exata da barra de pesquisa */
-    height:55px; /* Define a altura exata da barra de pesquisa */
+    height: 55px; /* Define a altura exata da barra de pesquisa */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para profundidade */
 }
 
@@ -38,7 +38,6 @@ header {
 .search-bar input[type="text"]::placeholder {
     color: #aaa; /* Cor do placeholder */
 }
-
 
 .container {
     display: flex;
@@ -197,7 +196,6 @@ main {
     justify-content: space-between; /* Distribui o espaço entre os itens */
 }
 
-
 /* Conteúdo principal */
 main {
     flex: 1;
@@ -220,6 +218,8 @@ main {
     display: block;
     max-width: 100%;
     height: auto;
+    width: 300px; /* Define a largura máxima do GIF */
+    height: 200px; /* Define a altura máxima do GIF */
 }
 
 .rodape {
