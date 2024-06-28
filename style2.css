@@ -235,8 +235,10 @@ main {
 
 .gifsobre {
     display: block;
-    max-width: 100%;
-    height: auto;
+    width: 1920px; /* Define a largura exata do GIF */
+    height: 907px; /* Define a altura exata do GIF */
+    max-width: 100%; /* Garante que o GIF não exceda a largura do contêiner */
+    height: auto; /* Mantém a proporção da altura do GIF */
 }
 
 .rodape {
