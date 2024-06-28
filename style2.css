@@ -1,10 +1,9 @@
-/* Estilos globais */
+/* Estilo geral */
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    font-family: sans-serif;
+    display: flex; /* Permite que os elementos ocupem todo o espaço vertical disponível */
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da tela */
 }
 
 /* Cabeçalho */
@@ -13,29 +12,73 @@ header {
     height: 100px;
     display: flex;
     align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 450px; /* Define a largura exata da barra de pesquisa */
+    height:55px; /* Define a altura exata da barra de pesquisa */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para profundidade */
+}
+
+.search-bar input[type="text"] {
+    flex: 1;
+    padding: 10px 15px; /* Ajusta o padding para um melhor espaçamento */
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-radius: 8px 0 0 8px; /* Adiciona bordas arredondadas na entrada de texto */
+    height: 100%; /* Garante que o input ocupe toda a altura da barra de pesquisa */
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: #aaa; /* Cor do placeholder */
+}
+
+
+.container {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
     padding: 0 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .logohome {
-    height: 80px;
+    height: 80px; /* Ajusta a altura da logo para caber no cabeçalho */
+    margin-right: 20px; /* Espaçamento entre a logo e a navegação */
 }
 
 .cabecalho__lista {
     display: flex;
-    list-style: none;
+    justify-content: center;
+    list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 0 20px; /* Espaçamento entre a lista e os outros elementos */
 }
 
 .lista__link a {
     text-decoration: none;
-    color: #d40000;
-    margin: 0 10px;
+    color: #d40000; /* Fonte */
+    margin-left: 1em;
 }
 
 .lista__link a:hover {
+    color: #fff680; /* Contraste do link ao passar o mouse */
+}
+
+.lista__link a:active {
     color: #fff680;
 }
 
@@ -44,23 +87,25 @@ header {
     align-items: center;
     background-color: #fff;
     border-radius: 8px;
-    width: 450px;
-    height: 55px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 378.61px; /* Define a largura exata da barra de pesquisa */
+    height: 48px; /* Define a altura exata da barra de pesquisa */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para profundidade */
 }
 
 .search-bar input[type="text"] {
     flex: 1;
-    padding: 10px 15px;
+    padding: 10px 15px; /* Ajusta o padding para um melhor espaçamento */
     border: none;
     outline: none;
     font-size: 16px;
-    border-radius: 8px 0 0 8px;
-    height: 100%;
+    border-radius: 8px 0 0 8px; /* Adiciona bordas arredondadas na entrada de texto */
+    height: 100%; /* Garante que o input ocupe toda a altura da barra de pesquisa */
 }
 
 .search-bar input[type="text"]::placeholder {
-    color: #aaa;
+    color: #aaa; /* Cor do placeholder */
+    font-size: 16px;
 }
 
 .search-bar button {
@@ -70,26 +115,88 @@ header {
     padding: 10px 20px;
     border-radius: 0 8px 8px 0;
     cursor: pointer;
-    height: 100%;
+    transition: background-color 0.3s ease;
+    height: 100%; /* Garante que o botão ocupe toda a altura da barra de pesquisa */
 }
 
 .search-bar button:hover {
     background-color: #fff680;
 }
 
+.search-bar button:focus {
+    outline: none;
+}
+
 @media (max-width: 600px) {
     .search-bar {
-        flex-direction: column;
-        width: auto;
-        height: auto;
+        margin: 10px 0; /* Ajusta a margem em telas menores */
+        flex-direction: column; /* Empilha os elementos verticalmente em telas pequenas */
+        align-items: stretch;
+        width: auto; /* Permite que a largura se ajuste automaticamente em telas pequenas */
+        height: auto; /* Permite que a altura se ajuste automaticamente */
     }
 
     .search-bar input[type="text"], .search-bar button {
-        width: 100%;
-        margin: 5px 0;
-        height: 40px;
+        border-radius: 8px; /* Bordas arredondadas em todos os lados */
+        width: 100%; /* Ocupa toda a largura */
+        margin: 5px 0; /* Espaçamento entre os elementos */
+        height: 40px; /* Altura fixa para os elementos empilhados */
+    }
+
+    .search-bar button {
+        border-radius: 0 0 8px 8px; /* Ajusta as bordas arredondadas */
     }
 }
+
+nav {
+    margin-top: 20px; /* Espaçamento entre o logotipo e as abas */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Exibe os itens da lista em linha */
+}
+
+nav li {
+    margin-right: 20px; /* Espaçamento entre os itens da lista */
+}
+
+nav li:last-child {
+    margin-right: 0; /* Remove o espaçamento do último item da lista */
+}
+
+main {
+    flex: 1; /* Flex-grow com valor alto */
+    background-color: #fff680;
+}
+
+.featured-restaurants {
+    background-color: #FEF47F; /* Altera o background da região em destaque */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center; /* Centraliza o conteúdo */
+    margin: 50px auto 0; /* Adiciona margem superior maior e centraliza horizontalmente */
+}
+
+.restaurant-box {
+    flex: 0 1 calc(30% - 20px); /* Define a largura flexível das caixas dos restaurantes e desconta a margem */
+    margin: 0 10px; /* Adiciona margem entre as caixas dos restaurantes */
+    text-align: center; /* Centraliza o conteúdo */
+    box-sizing: border-box; /* Inclui a borda e o preenchimento na largura e na altura */
+}
+
+.restaurant-box:hover img {
+    transform: scale(1.1); /* Aumenta a escala da imagem em 10% quando o mouse estiver sobre ela */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito */
+}
+
+.restaurants {
+    display: flex; /* Torna o contêiner de restaurantes um flex container */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+}
+
 
 /* Conteúdo principal */
 main {
@@ -115,32 +222,32 @@ main {
     height: auto;
 }
 
-/* Rodapé */
-footer {
+.rodape {
     text-align: center;
-    background-color: #2a1289;
-    color: #fff680;
-    padding: 20px;
+    background-color: #2a1289; /* Fundo */
+    color: #d40000; /* Fonte */
 }
 
 .rodape__lista {
     display: flex;
     justify-content: center;
-    list-style: none;
-    padding: 0;
+    list-style-type: none;
 }
 
-.rodape__lista .lista__link a {
+.lista__link a {
     text-decoration: none;
-    color: #fff680;
-    margin: 0 10px;
-}
-
-.rodape__lista .lista__link a:hover {
-    color: #ff8484;
+    color: #fff680; /* Fonte */
 }
 
 .rodape__texto {
-    color: #fff680;
+    color: #fff680; /* Fonte */
     font-size: 14px;
+}
+
+.lista__link a:hover {
+    color: #ff8484; /* Contraste do link ao passar o mouse */
+}
+
+.lista__link a:active {
+    color: #ff8484;
 }
