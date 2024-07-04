@@ -251,7 +251,6 @@ main {
     width: 700px; /* Largura da linha do texto */
     height: 90px; /* Altura da linha do texto */
     box-sizing: border-box;
-    overflow: hidden; /* Para garantir que o texto não ultrapasse a altura definida */
 }
 
     
