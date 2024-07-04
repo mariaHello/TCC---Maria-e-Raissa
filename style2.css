@@ -248,9 +248,12 @@ main {
     margin-left: 0;
     margin-right: auto;
     padding: 20px;
-    width: 60%; /* Ajuste conforme necessário para o layout desejado */
+    width: 700px; /* Largura da linha do texto */
+    height: 90px; /* Altura da linha do texto */
     box-sizing: border-box;
+    overflow: hidden; /* Para garantir que o texto não ultrapasse a altura definida */
 }
+
     
 .rodape {
     text-align: center;
