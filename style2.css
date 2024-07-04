@@ -241,8 +241,6 @@ main {
     height: auto; /* Mantém a proporção da imagem */
 }
 
-
-
 .texto_sobre {
     text-align: justify;
     margin-left: 0;
@@ -251,9 +249,9 @@ main {
     width: 700px; /* Largura da linha do texto */
     height: 90px; /* Altura da linha do texto */
     box-sizing: border-box;
+    color: #b70101; /* Cor do texto */
 }
 
-    
 .rodape {
     text-align: center;
     background-color: #2a1289; /* Fundo */
