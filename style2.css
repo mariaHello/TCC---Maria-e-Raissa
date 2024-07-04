@@ -250,7 +250,9 @@ main {
     height: 90px; /* Altura da linha do texto */
     box-sizing: border-box;
     color: #b70101; /* Cor do texto */
+    font-size: 18px; /* Aumenta o tamanho da fonte */
 }
+
 
 
 .rodape {
