@@ -232,6 +232,16 @@ main {
     display: none;
 }
 
+.logo {
+    position: fixed; /* Define a posição da logo */
+    top: 45%; /* Ajusta a posição verticalmente para o meio */
+    right: 300px; /* Define a distância da direita */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    width: 600px; /* Define a largura da logo */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
 
 .texto_sobre {
     text-align: justify;
