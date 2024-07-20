@@ -1,0 +1,39 @@
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo ao passar o mouse */
+    transform: translateY(-50%) scale(1.1); /* Leve aumento no tamanho ao passar o mouse */
+}
+
+.prev,
+.next {
+    /* position: absolute; */
+    height: 3rem;
+    width: 3rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
+    border: none;
+    color: #fff; /* Cor do texto branca */
+    font-size: 24px; /* Aumenta o tamanho da fonte */
+    cursor: pointer;
+    border-radius: 50%; /* Borda arredondada para os botões */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave para a cor de fundo e transformação */
+    z-index: 1; /* Garante que os botões fiquem sobrepostos às imagens */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.next {
+    right: 10px; /* Posicionamento à direita */
+}

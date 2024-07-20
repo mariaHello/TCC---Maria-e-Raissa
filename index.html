@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gemini Delivery</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Estilos/Carrosel/botoesCarrosel.css">
+    <link rel="stylesheet" href="Estilos/Carrosel/catalogos.css">
  <link rel="stylesheet" href="reset.css">
 </head>
 <body>
@@ -72,9 +74,9 @@
         <img src="promocoes.gif" alt="gifpromo" class="gifpromo">
 	</div> 
         <section class="promocoes">
+            <button class="prev" onclick="prevSlide('.promo-container')">❮</button>
     <div class="promocoes-carrosel">
-        <button class="prev" onclick="prevSlide('.promo-container')">❮</button>
-        <button class="next" onclick="nextSlide('.promo-container')">❯</button>
+
         <div class="promo-container">
             <div class="promo-item">
                 <img src="1.png" alt="Promoção 1">
@@ -96,13 +98,13 @@
             </div>
         </div>
     </div>
-</section>
+            <button class="next" onclick="nextSlide('.promo-container')">❯</button>
+        </section>
 <script src="seu-script.js"></script>
 
 <section class="promocoes2">
+    <button class="prev" onclick="prevSlide('.promo-container2')">❮</button>
     <div class="promocoes-carrosel2">
-        <button class="prev" onclick="prevSlide('.promo-container2')">❮</button>
-        <button class="next" onclick="nextSlide('.promo-container2')">❯</button>
         <div class="promo-container2">
             <div class="promo-item">
                 <img src="9.jpg" alt="Promoção 9">
@@ -136,6 +138,7 @@
             </div>
         </div>
     </div>
+    <button class="next" onclick="nextSlide('.promo-container2')">❯</button>
 </section>
 
 <script src="meu-script.js"></script>
