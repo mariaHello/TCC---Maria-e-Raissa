@@ -1,74 +1,56 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const promoContainer1 = document.querySelector('.promo-container');
-    const promoItems1 = document.querySelectorAll('.promo-container .promo-item');
+    const promoContainer = document.querySelector('.promo-container');
+    const promoItems = document.querySelectorAll('.promo-item');
 
-    let counter1 = 1;
-    const itemWidth1 = promoItems1[0].offsetWidth;
+    let counter = 1;
+    const itemWidth = promoItems[0].offsetWidth;
 
     // Clonar os primeiros e últimos itens para criar um efeito de looping
-    promoContainer1.insertBefore(promoItems1[promoItems1.length - 1].cloneNode(true), promoItems1[0]);
-    promoContainer1.appendChild(promoItems1[1].cloneNode(true));
+    promoContainer.insertBefore(promoItems[promoItems.length - 1].cloneNode(true), promoItems[0]);
+    promoContainer.appendChild(promoItems[0].cloneNode(true));
 
-    function updateTransform(container, counter, itemWidth) {
-        container.style.transform = `translateX(-${counter * itemWidth}px)`;
+    function updateTransform() {
+        promoContainer.style.transform = `translateX(-${counter * itemWidth}px)`;
     }
 
-    function nextSlide(container) {
-        const items = container.querySelectorAll('.promo-item');
-        const itemWidth = items[0].offsetWidth;
-
-        let counter = parseInt(container.getAttribute('data-counter')) || 1;
+    function nextSlide() {
+        if (counter >= promoItems.length) return; // Limita a quantidade de cliques no próximo
+        promoContainer.style.transition = 'transform 0.5s ease-in-out';
         counter++;
-        container.setAttribute('data-counter', counter);
-        container.style.transition = 'transform 0.5s ease';
-        updateTransform(container, counter, itemWidth);
+        updateTransform();
     }
 
-    function prevSlide(container) {
-        const items = container.querySelectorAll('.promo-item');
-        const itemWidth = items[0].offsetWidth;
-
-        let counter = parseInt(container.getAttribute('data-counter')) || 1;
+    function prevSlide() {
+        if (counter <= 0) return; // Limita a quantidade de cliques no anterior
+        promoContainer.style.transition = 'transform 0.5s ease-in-out';
         counter--;
-        container.setAttribute('data-counter', counter);
-        container.style.transition = 'transform 0.5s ease';
-        updateTransform(container, counter, itemWidth);
+        updateTransform();
     }
 
-    promoContainer1.setAttribute('data-counter', counter1);
-    updateTransform(promoContainer1, counter1, itemWidth1);
-
-    promoContainer1.addEventListener('transitionend', () => {
-        let counter = parseInt(promoContainer1.getAttribute('data-counter'));
-        if (counter >= promoItems1.length + 1) {
-            promoContainer1.style.transition = 'none';
+    promoContainer.addEventListener('transitionend', () => {
+        if (promoItems[counter].getAttribute('src') === promoItems[0].getAttribute('src')) {
+            promoContainer.style.transition = 'none';
             counter = 1;
-            promoContainer1.setAttribute('data-counter', counter);
-            updateTransform(promoContainer1, counter, itemWidth1);
+            updateTransform();
         }
-        if (counter <= 0) {
-            promoContainer1.style.transition = 'none';
-            counter = promoItems1.length;
-            promoContainer1.setAttribute('data-counter', counter);
-            updateTransform(promoContainer1, counter, itemWidth1);
+        if (promoItems[counter].getAttribute('src') === promoItems[promoItems.length - 1].getAttribute('src')) {
+            promoContainer.style.transition = 'none';
+            counter = promoItems.length - 2;
+            updateTransform();
         }
     });
 
-    document.querySelector('.promocoes-carrosel .next').addEventListener('click', () => {
-        nextSlide(promoContainer1);
-    });
+    document.querySelector('.next').addEventListener('click', nextSlide);
+    document.querySelector('.prev').addEventListener('click', prevSlide);
 
-    document.querySelector('.promocoes-carrosel .prev').addEventListener('click', () => {
-        prevSlide(promoContainer1);
-    });
+    // Iniciar o carrossel na posição inicial
+    promoContainer.style.transform = `translateX(-${itemWidth}px)`;
 
     // Função para iniciar o auto-play do carrossel
-    function startAutoPlay(container, interval = 3000) {
-        setInterval(() => {
-            nextSlide(container);
-        }, interval); // Altera para o próximo slide a cada 3 segundos
+    function startAutoPlay(interval = 3000) {
+        setInterval(nextSlide, interval);
     }
 
     // Inicia o auto-play quando a página é carregada
-    startAutoPlay(promoContainer1);
+    startAutoPlay();
 });
