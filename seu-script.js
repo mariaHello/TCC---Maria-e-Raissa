@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const promoContainer = document.querySelector('.promo-container');
-    const promoItems = document.querySelectorAll('.promo-item');
+    const promoItems = document.querySelectorAll('.promo-container .promo-item');
 
     let counter = 1;
     const itemWidth = promoItems[0].offsetWidth;
@@ -9,48 +9,66 @@ document.addEventListener('DOMContentLoaded', () => {
     promoContainer.insertBefore(promoItems[promoItems.length - 1].cloneNode(true), promoItems[0]);
     promoContainer.appendChild(promoItems[0].cloneNode(true));
 
-    function updateTransform() {
-        promoContainer.style.transform = `translateX(-${counter * itemWidth}px)`;
+    function updateTransform(container, counter, itemWidth) {
+        container.style.transform = `translateX(-${counter * itemWidth}px)`;
     }
 
-    function nextSlide() {
-        if (counter >= promoItems.length) return; // Limita a quantidade de cliques no próximo
-        promoContainer.style.transition = 'transform 0.5s ease-in-out';
+    function nextSlide(container) {
+        const items = container.querySelectorAll('.promo-item');
+        const itemWidth = items[0].offsetWidth;
+
+        let counter = parseInt(container.getAttribute('data-counter')) || 1;
         counter++;
-        updateTransform();
+        container.setAttribute('data-counter', counter);
+        container.style.transition = 'transform 0.5s ease';
+        updateTransform(container, counter, itemWidth);
     }
 
-    function prevSlide() {
-        if (counter <= 0) return; // Limita a quantidade de cliques no anterior
-        promoContainer.style.transition = 'transform 0.5s ease-in-out';
+    function prevSlide(container) {
+        const items = container.querySelectorAll('.promo-item');
+        const itemWidth = items[0].offsetWidth;
+
+        let counter = parseInt(container.getAttribute('data-counter')) || 1;
         counter--;
-        updateTransform();
+        container.setAttribute('data-counter', counter);
+        container.style.transition = 'transform 0.5s ease';
+        updateTransform(container, counter, itemWidth);
     }
+
+    promoContainer.setAttribute('data-counter', counter);
+    updateTransform(promoContainer, counter, itemWidth);
 
     promoContainer.addEventListener('transitionend', () => {
-        if (promoItems[counter].getAttribute('src') === promoItems[0].getAttribute('src')) {
+        let counter = parseInt(promoContainer.getAttribute('data-counter'));
+        if (counter >= promoItems.length + 1) {
             promoContainer.style.transition = 'none';
             counter = 1;
-            updateTransform();
+            promoContainer.setAttribute('data-counter', counter);
+            updateTransform(promoContainer, counter, itemWidth);
         }
-        if (promoItems[counter].getAttribute('src') === promoItems[promoItems.length - 1].getAttribute('src')) {
+        if (counter <= 0) {
             promoContainer.style.transition = 'none';
-            counter = promoItems.length - 2;
-            updateTransform();
+            counter = promoItems.length;
+            promoContainer.setAttribute('data-counter', counter);
+            updateTransform(promoContainer, counter, itemWidth);
         }
     });
 
-    document.querySelector('.next').addEventListener('click', nextSlide);
-    document.querySelector('.prev').addEventListener('click', prevSlide);
+    document.querySelector('.next').addEventListener('click', () => {
+        nextSlide(promoContainer);
+    });
 
-    // Iniciar o carrossel na posição inicial
-    promoContainer.style.transform = `translateX(-${itemWidth}px)`;
+    document.querySelector('.prev').addEventListener('click', () => {
+        prevSlide(promoContainer);
+    });
 
     // Função para iniciar o auto-play do carrossel
-    function startAutoPlay(interval = 3000) {
-        setInterval(nextSlide, interval);
+    function startAutoPlay(container, interval = 3000) {
+        setInterval(() => {
+            nextSlide(container);
+        }, interval); // Altera para o próximo slide a cada 3 segundos
     }
 
     // Inicia o auto-play quando a página é carregada
-    startAutoPlay();
+    startAutoPlay(promoContainer);
 });
