@@ -46,7 +46,58 @@ header {
 
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;.promo-container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Esconde os itens fora da área visível */
+    position: relative; /* Garante o posicionamento adequado */
+    width: 100%; /* Faz o contêiner ocupar 100% da largura da tela */
+}
+
+.promo-item {
+    flex: 0 0 calc((100% / 4) - 15px); /* Ajusta dinamicamente com base na tela (4 itens por linha) */
+    margin: 0 10px; /* Espaçamento entre os itens */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.promo-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Transição suave para o efeito hover */
+}
+
+.promo-item img:hover {
+    animation: bounce 0.5s infinite; /* Animação de "pulo" ao passar o mouse */
+}
+
+/* Animação do efeito "bounce" ao passar o mouse */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Estilização para telas menores */
+@media (max-width: 768px) {
+    .promo-item {
+        flex: 0 0 calc((100% / 2) - 10px); /* Ajuste para 2 itens por linha em telas menores */
+    }
+}
+
+/* Estilização para telas ainda menores (mobile) */
+@media (max-width: 480px) {
+    .promo-item {
+        flex: 0 0 calc(100% - 20px); /* Um item por linha em telas muito pequenas */
+    }
+}
+
     align-items: center;
     width: 100%;
     padding: 0 20px;
@@ -358,24 +409,35 @@ main {
 
 
 
+.promo-container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Esconde os itens fora da área visível */
+    position: relative; /* Garante o posicionamento adequado */
+    width: 100%; /* Faz o contêiner ocupar 100% da largura da tela */
+}
+
 .promo-item {
-    flex: 0 0 calc((1880px / 4) - 10px); /* Calcula a largura dinâmica para cada item */
-    border-radius: 10px; /* Borda arredondada */
-    overflow: hidden; /* Garante que a borda arredondada seja aplicada */
+    flex: 0 0 calc((100% / 4) - 15px); /* Ajusta dinamicamente com base na tela (4 itens por linha) */
+    margin: 0 10px; /* Espaçamento entre os itens */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
 }
 
 .promo-item img {
-    width: 100%; /* Imagens responsivas */
+    width: 100%;
     height: auto;
-    border-radius: 10px; /* Borda arredondada */
-    overflow: hidden; /* Garante que a borda arredondada seja aplicada */
-    transition: transform 0.3s ease; /* Suave transição para a animação */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Transição suave para o efeito hover */
 }
 
 .promo-item img:hover {
-    animation: bounce 0.5s infinite;
+    animation: bounce 0.5s infinite; /* Animação de "pulo" ao passar o mouse */
 }
 
+/* Animação do efeito "bounce" ao passar o mouse */
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
@@ -384,6 +446,21 @@ main {
         transform: translateY(-10px);
     }
 }
+
+/* Estilização para telas menores */
+@media (max-width: 768px) {
+    .promo-item {
+        flex: 0 0 calc((100% / 2) - 10px); /* Ajuste para 2 itens por linha em telas menores */
+    }
+}
+
+/* Estilização para telas ainda menores (mobile) */
+@media (max-width: 480px) {
+    .promo-item {
+        flex: 0 0 calc(100% - 20px); /* Um item por linha em telas muito pequenas */
+    }
+}
+
 
 
 
