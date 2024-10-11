@@ -274,6 +274,7 @@ main {
     justify-content: center;
     margin-top: 20px;
     overflow-x: auto;
+    padding: 20px 0; /* Adiciona espaço em cima e embaixo das imagens */
     scrollbar-width: none; /* Oculta a barra de rolagem no Firefox */
     -ms-overflow-style: none; /* Oculta a barra de rolagem no IE */
     scroll-snap-type: x mandatory; /* Rolagem suave e travada */
@@ -290,17 +291,19 @@ main {
     display: flex;
     scroll-snap-align: center; /* Centraliza cada imagem durante a rolagem */
     z-index: 1; /* Mantém as imagens acima de outros elementos */
+    overflow: visible; /* Permite que os efeitos de hover sejam visíveis */
 }
 
 .img-icone {
     margin-right: 10px;
     position: relative; /* Para o efeito de sombra no hover */
     z-index: 2; /* Mantém cada ícone acima dos outros elementos */
+    padding: 10px; /* Adiciona espaço ao redor do ícone para que o hover não corte */
 }
 
 .img-icone img {
     width: 100%; /* Tornando as imagens responsivas */
-    max-width: 120px; /* Tamanho máximo reduzido para mostrar a estilização */
+    max-width: 120px; /* Tamanho máximo ajustado */
     height: auto;
     border-radius: 8px; /* Bordas suavizadas */
     transition: transform 0.3s ease, filter 0.3s ease, border 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
@@ -338,7 +341,6 @@ main {
         max-width: 100px; /* Ajuste de tamanho para telas menores */
     }
 }
-
 
 
 .gifpromo {
