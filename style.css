@@ -106,7 +106,71 @@ header {
     outline: none;
     font-size: 16px;
     border-radius: 8px 0 0 8px; /* Adiciona bordas arredondadas na entrada de texto */
-    height: 100%; /* Garante que o input ocupe toda a altura da barra de pesquisa */
+    height: 100%; /* Garante que o input ocupe toda a altura da barra/* Estilização das imagens e efeito de hover */
+.home-img {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    overflow-x: auto;
+    scrollbar-width: none; /* Oculta a barra de rolagem no Firefox */
+    -ms-overflow-style: none; /* Oculta a barra de rolagem no IE */
+    scroll-snap-type: x mandatory; /* Rolagem suave e travada */
+    gap: 15px; /* Espaçamento entre as imagens */
+}
+
+.home-img::-webkit-scrollbar {
+    display: none; /* Oculta a barra de rolagem no Chrome/Safari */
+}
+
+.home-imagem {
+    display: flex;
+    scroll-snap-align: center; /* Centraliza cada imagem durante a rolagem */
+}
+
+.img-icone {
+    margin-right: 10px;
+    position: relative; /* Para o efeito de sombra no hover */
+}
+
+.img-icone img {
+    width: 100%; /* Tornando as imagens responsivas */
+    max-width: 150px; /* Tamanho máximo */
+    height: auto;
+    border-radius: 8px; /* Bordas suavizadas */
+    transition: transform 0.3s ease, filter 0.3s ease, border 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    object-fit: cover; /* Assegura que as imagens mantenham proporção */
+}
+
+.img-icone img:hover {
+    transform: scale(1.1); /* Efeito de zoom suave */
+    filter: brightness(90%);
+    border: 2px solid red;
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.6); /* Sombra pulsante */
+    animation: shadow-pulse 0.6s infinite alternate; /* Animação de sombra */
+}
+
+.img-icone img:focus {
+    outline: 2px solid blue; /* Foco para acessibilidade */
+}
+
+/* Animação de sombra pulsante */
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 6px 15px rgba(255, 0, 0, 0.4);
+    }
+    100% {
+        box-shadow: 0 6px 20px rgba(255, 0, 0, 0.6);
+    }
+}
+
+/* Adaptação para telas menores */
+@media (max-width: 768px) {
+    .img-icone img {
+        max-width: 120px; /* Ajuste de tamanho para telas menores */
+    }
+}
+ de pesquisa */
 }
 
 .search-bar input[type="text"]::placeholder {
@@ -235,19 +299,31 @@ main {
     max-width: 150px; /* Tamanho máximo */
     height: auto;
     border-radius: 8px; /* Bordas suavizadas */
-    transition: filter 0.3s ease, border 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    transition: transform 0.3s ease, filter 0.3s ease, border 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
     cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
     object-fit: cover; /* Assegura que as imagens mantenham proporção */
 }
 
 .img-icone img:hover {
-    filter: brightness(85%);
+    transform: scale(1.1); /* Efeito de zoom suave */
+    filter: brightness(90%);
     border: 2px solid red;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra suave no hover */
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.6); /* Sombra pulsante */
+    animation: shadow-pulse 0.6s infinite alternate; /* Animação de sombra */
 }
 
 .img-icone img:focus {
     outline: 2px solid blue; /* Foco para acessibilidade */
+}
+
+/* Animação de sombra pulsante */
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 6px 15px rgba(255, 0, 0, 0.4);
+    }
+    100% {
+        box-shadow: 0 6px 20px rgba(255, 0, 0, 0.6);
+    }
 }
 
 /* Adaptação para telas menores */
