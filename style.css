@@ -207,39 +207,54 @@ main {
 /* Estilização das imagens e efeito de hover */
 .home-img {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    gap: 15px; /* Espaço entre os ícones */
-    margin-top: 20px; /* Espaçamento entre o cabeçalho e as imagens */
+    justify-content: center;
+    margin-top: 20px;
     overflow-x: auto;
-    scrollbar-width: none; /* Oculta barra de rolagem no Firefox */
-    -ms-overflow-style: none; /* Oculta barra de rolagem no IE e Edge */
+    scrollbar-width: none; /* Oculta a barra de rolagem no Firefox */
+    -ms-overflow-style: none; /* Oculta a barra de rolagem no IE */
+    scroll-snap-type: x mandatory; /* Rolagem suave e travada */
+    gap: 15px; /* Espaçamento entre as imagens */
+}
+
+.home-img::-webkit-scrollbar {
+    display: none; /* Oculta a barra de rolagem no Chrome/Safari */
 }
 
 .home-imagem {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    scroll-snap-align: center; /* Centraliza cada imagem durante a rolagem */
 }
 
 .img-icone {
-    flex-shrink: 0; /* Evita que as imagens encolham */
+    margin-right: 10px;
+    position: relative; /* Para o efeito de sombra no hover */
 }
 
 .img-icone img {
-    width: 150px; /* Largura fixa das imagens */
+    width: 100%; /* Tornando as imagens responsivas */
+    max-width: 150px; /* Tamanho máximo */
     height: auto;
-    border-radius: 8px; /* Suaviza bordas com raio maior */
-    transition: filter 0.3s ease, border-color 0.3s ease; /* Transições mais suaves */
+    border-radius: 8px; /* Bordas suavizadas */
+    transition: filter 0.3s ease, border 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    object-fit: cover; /* Assegura que as imagens mantenham proporção */
 }
 
 .img-icone img:hover {
-    filter: brightness(85%); /* Efeito de escurecimento mais sutil */
-    border: 2px solid #ff4d4d; /* Cor de borda mais agradável (tom de vermelho) */
-    transform: scale(1.05); /* Aumenta a imagem levemente ao passar o mouse */
+    filter: brightness(85%);
+    border: 2px solid red;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra suave no hover */
 }
 
-.home-img::-webkit-scrollbar {
-    display: none; /* Oculta a barra de rolagem no WebKit (Chrome, Safari) */
+.img-icone img:focus {
+    outline: 2px solid blue; /* Foco para acessibilidade */
+}
+
+/* Adaptação para telas menores */
+@media (max-width: 768px) {
+    .img-icone img {
+        max-width: 120px; /* Ajuste de tamanho para telas menores */
+    }
 }
 
 
