@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const promoContainer = document.querySelector('.promo-container');
-    const promoItems = document.querySelectorAll('.promo-container .promo-item');
+    let promoItems = document.querySelectorAll('.promo-container .promo-item'); // Deve ser let para ser atualizado após a clonagem
 
     let counter = 1;
     const itemWidth = promoItems[0].offsetWidth;
@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Clonar os primeiros e últimos itens para criar um efeito de looping
     promoContainer.insertBefore(promoItems[promoItems.length - 1].cloneNode(true), promoItems[0]);
     promoContainer.appendChild(promoItems[0].cloneNode(true));
+
+    // Atualiza o promoItems após a clonagem
+    promoItems = document.querySelectorAll('.promo-container .promo-item');
 
     function updateTransform(container, counter, itemWidth) {
         container.style.transform = `translateX(-${counter * itemWidth}px)`;
@@ -40,15 +43,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     promoContainer.addEventListener('transitionend', () => {
         let counter = parseInt(promoContainer.getAttribute('data-counter'));
-        if (counter >= promoItems.length + 1) {
-            promoContainer.style.transition = 'none';
-            counter = 1;
+
+        // Verifica se está no último item clonado (loop para o começo)
+        if (counter >= promoItems.length - 1) {
+            promoContainer.style.transition = 'none'; // Remove a transição para evitar o "salto"
+            counter = 1; // Volta ao primeiro item (real)
             promoContainer.setAttribute('data-counter', counter);
             updateTransform(promoContainer, counter, itemWidth);
         }
+
+        // Verifica se está no primeiro item clonado (loop para o final)
         if (counter <= 0) {
             promoContainer.style.transition = 'none';
-            counter = promoItems.length;
+            counter = promoItems.length - 2; // Vai para o último item real
             promoContainer.setAttribute('data-counter', counter);
             updateTransform(promoContainer, counter, itemWidth);
         }
@@ -64,11 +71,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Função para iniciar o auto-play do carrossel
     function startAutoPlay(container, interval = 3000) {
-        setInterval(() => {
+        return setInterval(() => {
             nextSlide(container);
         }, interval); // Altera para o próximo slide a cada 3 segundos
     }
 
-    // Inicia o auto-play quando a página é carregada
-    startAutoPlay(promoContainer);
+    let autoPlayInterval = startAutoPlay(promoContainer);
+
+    // Pausa o autoplay quando o mouse estiver sobre o carrossel
+    promoContainer.addEventListener('mouseenter', () => {
+        clearInterval(autoPlayInterval);
+    });
+
+    // Retoma o autoplay quando o mouse sair do carrossel
+    promoContainer.addEventListener('mouseleave', () => {
+        autoPlayInterval = startAutoPlay(promoContainer);
+    });
 });
