@@ -293,7 +293,7 @@ main {
 }
 
 .img-icone {
-    margin-right: 10px;
+    margin-right: 8px;
     position: relative; /* Para o efeito de sombra no hover */
     z-index: 2; /* Mantém cada ícone acima dos outros elementos */
 }
