@@ -1,15 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     const promoContainer = document.querySelector('.promo-container');
-    let promoItems = document.querySelectorAll('.promo-container .promo-item'); // Deve ser let para ser atualizado após a clonagem
-
+    let promoItems = document.querySelectorAll('.promo-container .promo-item');
+    
     let counter = 1;
     const itemWidth = promoItems[0].offsetWidth;
 
     // Clonar os primeiros e últimos itens para criar um efeito de looping
-    promoContainer.insertBefore(promoItems[promoItems.length - 1].cloneNode(true), promoItems[0]);
-    promoContainer.appendChild(promoItems[0].cloneNode(true));
+    const firstClone = promoItems[0].cloneNode(true);
+    const lastClone = promoItems[promoItems.length - 1].cloneNode(true);
 
-    // Atualiza o promoItems após a clonagem
+    // Adiciona o clone no início e no fim
+    promoContainer.appendChild(firstClone);
+    promoContainer.insertBefore(lastClone, promoItems[0]);
+
+    // Atualiza a lista de promoItems após a clonagem
     promoItems = document.querySelectorAll('.promo-container .promo-item');
 
     function updateTransform(container, counter, itemWidth) {
@@ -17,9 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function nextSlide(container) {
-        const items = container.querySelectorAll('.promo-item');
-        const itemWidth = items[0].offsetWidth;
-
         let counter = parseInt(container.getAttribute('data-counter')) || 1;
         counter++;
         container.setAttribute('data-counter', counter);
@@ -28,9 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function prevSlide(container) {
-        const items = container.querySelectorAll('.promo-item');
-        const itemWidth = items[0].offsetWidth;
-
         let counter = parseInt(container.getAttribute('data-counter')) || 1;
         counter--;
         container.setAttribute('data-counter', counter);
@@ -44,15 +42,15 @@ document.addEventListener('DOMContentLoaded', () => {
     promoContainer.addEventListener('transitionend', () => {
         let counter = parseInt(promoContainer.getAttribute('data-counter'));
 
-        // Verifica se está no último item clonado (loop para o começo)
+        // Verifica se está no clone do último item e volta para o primeiro item real
         if (counter >= promoItems.length - 1) {
             promoContainer.style.transition = 'none'; // Remove a transição para evitar o "salto"
-            counter = 1; // Volta ao primeiro item (real)
+            counter = 1; // Volta ao primeiro item real
             promoContainer.setAttribute('data-counter', counter);
             updateTransform(promoContainer, counter, itemWidth);
         }
 
-        // Verifica se está no primeiro item clonado (loop para o final)
+        // Verifica se está no clone do primeiro item e vai para o último item real
         if (counter <= 0) {
             promoContainer.style.transition = 'none';
             counter = promoItems.length - 2; // Vai para o último item real
