@@ -411,7 +411,7 @@ main {
 
 .promo-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Alinhamento à esquerda */
     overflow: hidden; /* Esconde os itens fora da área visível */
     position: relative; /* Garante o posicionamento adequado */
     width: 100%; /* Faz o contêiner ocupar 100% da largura da tela */
@@ -419,17 +419,16 @@ main {
 
 .promo-item {
     flex: 0 0 calc((100% / 4) - 15px); /* Ajusta dinamicamente com base na tela (4 itens por linha) */
-    margin: 0 10px; /* Espaçamento entre os itens */
+    margin: 0 5px; /* Espaçamento entre os itens */
     border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out; /* Transição suave ao passar o mouse */
 }
 
 .promo-item img {
     width: 100%;
-    height: auto;
+    height: auto; /* Mantém a proporção */
     border-radius: 10px;
-    overflow: hidden;
     transition: transform 0.3s ease; /* Transição suave para o efeito hover */
 }
 
