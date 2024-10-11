@@ -278,6 +278,8 @@ main {
     -ms-overflow-style: none; /* Oculta a barra de rolagem no IE */
     scroll-snap-type: x mandatory; /* Rolagem suave e travada */
     gap: 15px; /* Espaçamento entre as imagens */
+    z-index: 1; /* Garante que as imagens fiquem acima de outros elementos */
+    position: relative; /* Posicionamento relativo para controlar o z-index */
 }
 
 .home-img::-webkit-scrollbar {
@@ -287,11 +289,13 @@ main {
 .home-imagem {
     display: flex;
     scroll-snap-align: center; /* Centraliza cada imagem durante a rolagem */
+    z-index: 1; /* Mantém as imagens acima de outros elementos */
 }
 
 .img-icone {
     margin-right: 10px;
     position: relative; /* Para o efeito de sombra no hover */
+    z-index: 2; /* Mantém cada ícone acima dos outros elementos */
 }
 
 .img-icone img {
@@ -302,6 +306,7 @@ main {
     transition: transform 0.3s ease, filter 0.3s ease, border 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
     cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
     object-fit: cover; /* Assegura que as imagens mantenham proporção */
+    z-index: 3; /* Certifica-se de que a imagem sempre esteja visível */
 }
 
 .img-icone img:hover {
@@ -310,6 +315,7 @@ main {
     border: 2px solid red;
     box-shadow: 0 6px 20px rgba(255, 0, 0, 0.6); /* Sombra pulsante */
     animation: shadow-pulse 0.6s infinite alternate; /* Animação de sombra */
+    z-index: 4; /* Garante que a imagem em hover fique acima de tudo */
 }
 
 .img-icone img:focus {
@@ -332,7 +338,6 @@ main {
         max-width: 120px; /* Ajuste de tamanho para telas menores */
     }
 }
-
 
 
 .gifpromo {
