@@ -1,26 +1,29 @@
-.promocoes2, .promocoes{
+.promocoes2, .promocoes {
     display: flex;
     align-items: center;
     gap: 1rem;
     margin: 0 1rem 6rem 1rem;
 }
-.promocoes{
+
+.promocoes {
     height: 70%;
 }
-.promocoes2{
+
+.promocoes2 {
     height: 30%;
 }
+
 .promo-container, .promo-container2 {
     display: flex;
     transition: transform 0.5s ease;
-    gap: 10px; /* Adiciona espaçamento entre os itens */
+    gap: 10px; /* Espaçamento entre os itens */
 }
 
 .promocoes-carrosel {
     position: relative;
     overflow: hidden;
     max-width: 1880px;
-    width: 100%
+    width: 100%;
 }
 
 .promocoes-carrosel2 {
@@ -28,5 +31,12 @@
     overflow: hidden;
     width: 100%; /* Ajuste para 100% da largura do contêiner pai */
     max-width: 1880px; /* Limita a largura máxima */
+}
 
+/* Removendo a animação das imagens */
+.promo-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: none; /* Remove qualquer transição ou animação */
 }
