@@ -38,13 +38,12 @@
     width: 100%;
     height: auto;
     border-radius: 10px;
-    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease; /* Suave transição para hover */
-    transform-origin: center center; /* Centraliza o zoom */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suave transição para hover */
+    transform-origin: center center; /* Centraliza o zoom para evitar "pulos" */
 }
 
-/* Efeito hover: zoom e sombra leve */
+/* Efeito hover: zoom suave e sombra ao redor */
 .promo-item img:hover {
-    transform: scale(1.05); /* Aumenta a imagem suavemente */
-    filter: brightness(90%); /* Leve ajuste de brilho */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra suave ao passar o mouse */
+    transform: scale(1.05); /* Leve zoom ao passar o mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra suave ao redor */
 }
