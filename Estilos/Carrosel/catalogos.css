@@ -39,6 +39,7 @@
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease; /* Suave transição para hover */
+    transform-origin: center center; /* Centraliza o zoom */
 }
 
 /* Efeito hover: zoom e sombra leve */
