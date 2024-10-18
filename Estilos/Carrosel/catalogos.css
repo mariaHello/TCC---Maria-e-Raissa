@@ -19,31 +19,25 @@
     gap: 10px; /* Espaçamento entre os itens */
 }
 
-.promocoes-carrosel {
+.promocoes-carrosel, .promocoes-carrosel2 {
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Certifique-se de que este overflow esteja controlado */
     max-width: 1880px;
     width: 100%;
 }
 
-.promocoes-carrosel2 {
-    position: relative;
-    overflow: hidden;
-    width: 100%; /* Ajuste para 100% da largura do contêiner pai */
-    max-width: 1880px; /* Limita a largura máxima */
-}
-
-/* Efeito hover nas imagens */
+/* Aplicando o box-sizing para controlar bem as bordas */
 .promo-item img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suave transição para hover */
+    box-sizing: border-box; /* Certifica que as bordas sejam incluídas no tamanho total */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
     transform-origin: center center; /* Centraliza o zoom para evitar "pulos" */
 }
 
-/* Efeito hover: zoom suave e sombra ao redor */
+/* Efeito hover: zoom suave e sombra */
 .promo-item img:hover {
     transform: scale(1.05); /* Leve zoom ao passar o mouse */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra suave ao redor */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra suave ao redor */
 }
