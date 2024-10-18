@@ -16,7 +16,7 @@
 .promo-container, .promo-container2 {
     display: flex;
     transition: transform 0.5s ease;
-    gap: 10px; /* Espaçamento entre os itens */
+    gap: 10px; /* Adiciona espaçamento entre os itens */
 }
 
 .promocoes-carrosel {
@@ -33,10 +33,17 @@
     max-width: 1880px; /* Limita a largura máxima */
 }
 
-/* Removendo a animação das imagens */
+/* Efeito hover nas imagens */
 .promo-item img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    transition: none; /* Remove qualquer transição ou animação */
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease; /* Transições suaves para hover */
+}
+
+/* Efeito hover: zoom e sombra */
+.promo-item img:hover {
+    transform: scale(1.05); /* Leve aumento de zoom */
+    filter: brightness(90%); /* Reduz o brilho em 10% */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra suave ao passar o mouse */
 }
