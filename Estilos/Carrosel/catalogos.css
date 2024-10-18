@@ -21,23 +21,28 @@
 
 .promocoes-carrosel, .promocoes-carrosel2 {
     position: relative;
-    overflow: hidden; /* Certifique-se de que este overflow esteja controlado */
+    overflow: hidden; /* Previne que o zoom extrapole os limites */
     max-width: 1880px;
     width: 100%;
 }
 
-/* Aplicando o box-sizing para controlar bem as bordas */
+.promo-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Garante que o zoom não corte a imagem */
+    width: 100%;
+    height: auto;
+}
+
 .promo-item img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-sizing: border-box; /* Certifica que as bordas sejam incluídas no tamanho total */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
-    transform-origin: center center; /* Centraliza o zoom para evitar "pulos" */
+    border-radius: 10px; /* Bordas arredondadas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para hover */
 }
 
-/* Efeito hover: zoom suave e sombra */
 .promo-item img:hover {
-    transform: scale(1.05); /* Leve zoom ao passar o mouse */
+    transform: scale(1.05); /* Leve zoom no hover */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra suave ao redor */
 }
